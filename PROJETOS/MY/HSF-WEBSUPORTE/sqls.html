@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <title>SYSTEM SQLs</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <header>
+        <div class="logomarca">
+            <img src="images/Logo_HSF.png" />
+        </div><!--logomarca-->
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cfgs.html">CFGS</a></li>
+                    <li><a href="sqls.html">SQLs</a></li>
+                    <li><a href="uteis.html">Úteis</a></li>
+                    <li><a href="aplicativos.html">Aplicativos</a></li>
+                    <li><a href="solutions.html">Solution for Bugs</a></li>
+                </ul>
+            </nav>
+        </div><!--menu-->
+        <div class="mobile-menu">
+            <img src="images/mobile.png">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cfgs.html">CFGS</a></li>
+                    <li><a href="sqls.html">SQLs</a></li>
+                    <li><a href="uteis.html">Úteis</a></li>
+                    <li><a href="aplicativos.html">Aplicativos</a></li>
+                    <li><a href="solutions.html">Solution for Bugs</a></li>
+                </ul>
+            </nav>
+        </div><!--mobile-menu-->
+        <div class="clear"></div><!--clear-->
+    </header><!--FIM DO HEADER-->
+    <section class="tags">
+        <div class="icones">
+            <div class="baixar-subir">
+                <button onclick="topFunction()" id="myBnt"><img title="Volte ao topo" src="images/voltaraotopo.png"></button>
+            </div>
+        </div>
+        <div class="tag-sqls">
+            <h3>SQLS DO SISTEMA</h3>
+            <br><br><br><br><br><br><br>
+            <p>//SQL PARA ATIVAR DRE NO SISTEMA INTERDATA</p>
+            <h1>UPDATE CONFIGURA SET A_USADRE='SIM'</h1>
+            <p>//SQL PARA FUNCIONAR NFCe TRANSMISSOR</p>
+            <h1>UPDATE NOTASFISCAL SET I_VERIFICADO = 0<br>WHERE A_AUTORIZAUSO = 'EM USO'<br>AND A_INUTILIZADA = 'NÃO'<br>AND A_CANCELADA = 'NÃO'<br>AND A_MODELNF = '65'</h1>
+            <p>//Foi realizado alteração no InterAtualizador para que inative os trigger quando estiver ativado replicação de filial e desabilitada a replicação off</p>
+            <p>//1=Matriz 2=Filial</p>
+            <h1>A_REPLICAPRODOFF='NÃO'<br>I_TPREPLICAPROD=2</h1>
+            <p>//Foi criada configuração no banco de dados para facilitar o uso de Preços de Atacado no Hiper PDV para clientes que utilizam Teclado de Automação e Preço A Prazo Padrão.<br><br>//Quando esta configuração estiver ativada:<br>//Ao ir para tela de fechamento da venda, automaticamente será aberto a tela para seleção de preço com opção automatica para troca de preço a vista.<br>//Ao pressionar enter para selecionar o preço não será exibido mensagem de confirmação para troca de preço<br>//Ao alterar para preço a prazo e pressionar enter na tela de seleção de preço, automaticamente será direcionado para forma de pagamento duplicata<br>//É exibido na tela de seleção de preço um label com o valor da diferença entre os dois preços pra informar ao cliente</p>
+            <h1>UPDATE CONFIGURA<br>SET A_LISTAPRECOVENDAFAST='SIM',<br>A_LISTAPRECOATACPADRAO='NÃO',<br>A_USALISTAPRECOPDV='SIM'</h1>
+            <p>//Habilita nova de tela promoção</p>
+            <h1>UPDATE CONFIGURA SET A_NOVAPROMOCAO='SIM'</h1>
+            <p>//Apaga Versão para casos do Sistema não abrir com VERSÃO INFERIOR. Vai permitir que o NEED grave novamente a versão correta.</p>
+            <h1>UPDATE RDB$DATABASE<br>SET RDB$SYSTEM_VER=''</h1>
+            <p>//Colocar o cliente no começo da venda (INTERDATA) para que seja possível salvar o nome do cliente na opção de CONTINUAR VENDAS/ORÇAMENTOS/CONDICIONAIS.</p>
+            <h1>update configura  set a_selcliinivenda='SIM'</h1>
+            <p>Foi criada configuração no Banco de Dados para poder ativar Emissor de Cheques no HIPER PDV</p>
+            <h1>UPDATE CONFIGURA<br>SET B_EMISSORCHEQUE='SIM'</h1>
+            <p>Foi implementado na tela de venda a tela de seleção de produtos vinculados que ao informar a quantidade de cada produto vinculado na tela e confirmar, todos os produtos são lançados. Necessário estar ativado produto vinculado. Necessário estar ativado o CFG Abaixo. Necessário que o produto informado tenham produtos vinculados para ser exibido a tela.(Mega Distribuidora de Cabos e Fios - Ji-Paraná)<br><span>[VENDA]<br>Multi Seleção Vinculados=1</span></p>
+            <h1>UPDATE CONFIGURA<br>A_PRODVINCULADO='SIM'<br></h1>
+            <p>Ao dar desconto no contas a receber vai calcular comissao proporcional ao recebimento!<br>Obs: Para funcionar tem que estar marcado na configuração do sistema 'Gerar Comissão Só no Recebimento';</p>
+            <h1>UPDATE CONFIGURA SET A_REAJUSTACOMREC='SIM';</h1>
+            <p>Foi adicionado Pix nos lançamentos de itens de conferência cega no encerramento de caixa</p>
+            <h1>UPDATE CONFIGURA<br>SET A_ENCERRACX='SIM',<br>A_ENCCEGO='SIM'</h1>
+            <p>Foi adicionado Pix no relatório da tela de encerramento de caixa fechado com conferência cega (Encerramento de Caixa -> Botão direito no Fechamento -> Conferência Cega)</p>
+            <h1>UPDATE CONFIGURA<br>SET A_ENCERRACX='SIM',<br>A_ENCCEGO='SIM'</h1>
+            <p>Foi realizada alteração na rotina de carregar comanda no Hiper PDV (CTRL+F6) para que permita carregar mais de uma comanda em uma unica venda. Obs: Não é permitido unificar vendas convencionais com comanda, somente comanda com comanda, tem que ser ativo junto com cfg:<br><span>Terminal Cliente Comanda=1</span></p>
+            <h1>UPDATE CONFIGURA<br>SET A_COMANDAPDV='SIM'</h1>
+            <p>// Habilita botão novo no romaneio de vendas para melhor controle dos romaneios gerados</p>
+            <h1>UPDATE CONFIGURA SET A_ROMANEIOCOMP='SIM'</h1>
+            <p>// Habilita para que quando realizar o recebimendo de um receber com desconto o sistema ajuste o valor a comissão para o valor recebido</p>
+            <h1>UPDATE CONFIGURA SET A_REAJUSTACOMREC='SIM'</h1>
+            <p>Foi criada configuração no banco de dados para que possa gerar documento de crédito avulso com movimentação financeira no INTERDATA para devidos controles no sistema. configuração deve ser ativada via banco de dados<br>Utilitários -> Consulta de Documentos de Crédito -> Doc. Crédito Avulso</p>
+            <h1>UPDATE CONFIGURA<br>SET A_DOCCREDFINAVULSO='SIM'</h1>
+            <p>// Habilita para que o operador digita os indicadores do caixa sem poder visualizalo.</p>
+            <h1>UPDATE CONFIGURA SET A_ENCCEGO='SIM'</h1>
+            <p>//Foi criada configuração no banco de dados para que o cliente fornecido na entrega na não saia na NFC-e. Caso o cliente informe o cadastro na tela em que se pede os dados do cliente ou caso possua duplicata, saira no nome do cliente informado nestas opções.<br>*Padrão ATIVADO*<br>(Tem Tem Supermercado - Machadinho D'Oeste)<br>Para DESATIVAR:</p>
+            <h1>UPDATE CONFIGURA<br>SET A_CLIENTREGANFCE='NÃO'</h1>
+            <p>// Habilita formula para formação de preço no sistema.</p>
+            <h1>UPDATE configura set a_usaformulapreco='SIM'</h1>
+            <p>// Opção para realizar o fechamento de orçamentos de serviço diretamente do módulo de serviço sem ter que enviar para o caixa.</p>
+            <h1>UPDATE CONFIGURA SET A_FECHAVENDASERVDIRETO='SIM'</h1>
+            <p>// Detalha produtos entregues na Devolução de venda (Benevides)</p>
+            <h1>UPDATE CONFIGURA SET A_DETENTREGADVC='SIM'</h1>
+            <p>// Não conceder desconto em item com Desconto Interdata (Benevides) Tem nivel de acesso.</p>
+            <h1>UPDATE CONFIGURA SET A_NOTDESCITEMDESC='NÃO'</h1>
+            <p>//Grade de Produto (A Preferida)</p>
+            <h1>UPDATE CONFIGURA SET A_USAGRADEPROD='SIM'</h1>
+            <p>// 1= Gera um codigo para cada grade 2= Gera um codigo para cada produto de grade</p>
+            <h1>UPDATE CONFIGURA SET I_TPGRADEPROD=1</h1>
+            <p>// 1= Nome + Linha + Coluna 2= Nome + (tem que testar para ver se e columa ou linha) 3= Nome</p>
+            <h1>UPDATE CONFIGURA SET I_TPNOMEPRODGRADE=1</h1>
+            <p>// 1= Lancamento da Grade no final da importacao NF-e 2= Lancamento Item a Item</p>
+            <h1>UPDATE CONFIGURA SET I_TPLANCAGRADE=1</h1>
+            <p>// Adicionada configuracao por banco de dados para configurar como o sistema controla o desconto sobre itens em promocao (Benevides)<br>// 1 = Bloqueia desconto de itens em promocao com nivel de acesso, nao deixa aplicar; 2 = Aplica o desconto apenas sobre itens sem promocao caso usuario nao possua nivel;</p>
+            <h1>UPDATE CONFIGURA SET I_TPDESCPROMOVENDA=2</h1>
+            <p>// Habilita preço de atavado no PDV</p>
+            <h1>UPDATE CONFIGURA SET A_USAPRECOATACPDV='SIM'</h1>
+            <p>// Preço de atacado PDV<br>// 1 = Deve ser lancado a quantidade total de atacado para pegar o preco atacado<br>// 2 = Conta os itens e informa o valor de desconto no final da venda<br>// 3 = Fornece o percentual de desconto diretamente no cadastro do produto</p>
+            <h1>UPDATE CONFIGURA SET I_TPDESCATACADOPDV=2</h1>
+            <p>// Adicionado campo para configurar tipo de preco no PDV para que o sistema considere o preco mais baixo ao lancar item (Tem Tem Supermercado) 1 = Funcionamento Normal 2 = Considera o menor preco</p>
+            <h1>UPDATE CONFIGURA SET I_TIPOPRECOPDV=2</h1>
+            <p>// 1=Modo Normal 2=Modo que Disponibiliza a comissao conforme o Valor Proporcional ao Cheque Compensado</p>
+            <h1>UPDATE CONFIGURA SET I_TPDISPCOMREC=2</h1>
+            <p>// Implementada tela de controle de entrega simplificado, ativo por banco de dados e não funciona com baixar estoque pós entrega (Distribuidora Rigonato) 1= Entrega Normal 2= Entrega Simplificada</p>
+            <h1>UPDATE CONFIGURA SET I_TIPOENTREGA=2</h1>
+            <p>// Adicionada configuracao por Banco de Dados para que o sistema permita reabrir uma venda, podendo a mesma ser fechada novamente, necessário nivel de acesso (Sulflex)<br>// Case existe uma NFC-e emitida o sistema nao ira bloquear o estorno, porem ao fechar novamente a venda ele nao ira emitir uma nova. A emissao de NF-e ja possui validacao de documento emitido,<br>// por isso nao sofreu nenhum tipo de alteracao.</p>
+            <h1>UPDATE CONFIGURA SET A_REABREVENDA='SIM'</h1>
+            <p>// Adicionada configuracao por Banco de Dados para que o sistema nao valide as informacoes do cheque ao lancados na venda e permida editar todos os campos posteriormente no modulo de cheques (Sulflex)</p>
+            <h1>UPDATE CONFIGURA SET A_EDITACHEQUEVENDA='SIM'</h1>
+            <p>// Adicionada configuração no banco de dados para disponilizar a comissão proporcionalmente ao valor do recebimento (D'Marca)<br>// Funciona junto com a função desenvolvida pra central laminações, que disponiliza a comissão proporcional ao cheque que foi compensado, quando mais de um cheque fizer parte do recebimento<br>// em um recebimento "só de cheques". A_GRCOMISCHEQUEREC=SIM/NÃO I_TPDISPCOMREC=1 ou 2</p>
+            <h1>UPDATE CONFIGURA SET A_DISPCOMRECPARC='SIM'</h1>
+            <p>// Adicionada configuração por banco de dados para habilitar o cancelamento da venda após o cancelamento da NF-e (Aibara)<br>// Existe uma mensagem de confirmação ativa por padrão, mas que pode ser removida por CFG: <span>[NFe]Confirma Cancelamento Venda=0</span></p>
+            <h1>UPDATE CONFIGURA SET A_CANCVENDAAPOSNFE='SIM'</h1>
+            <p>// Adicionada rotina no cadastro e produto, fatura e importacao de NF-e, para exibir opcoes de alteracao da promocao em caso de alteracao do preco de venda, ativo por configuracao aba Cadastro/Pag (Benevides)<br>// Na importacao de NF-e a atualizacao da promocao so ocorre apos a finalizacao da fatura.</p>
+            <h1>UPDATE CONFIGURA SET A_AVISOALTPROMOPRECO='SIM'</h1>
+            <p>// LMC Automatico ao abrir o sistema (Posto Soberana)</p>
+            <h1>UPDATE CONFIGURA SET A_LMCAUTO='SIM'</h1>
+            <p>// COMBO PDV / Smart só funciona com o Firebird 2.1 / necessário voltar alguns pack.<br>// Cadastro de Combo Opção 'Somente Múltiplo' Aplica o Desconto sobre o produto Cada vez que o valor atinge o 'Total de Compra'<br>// Cadastro de Combo Opção 'Desconsiderar Valor do Produto' não considera o produto que recebe desconto na soma para atingir o 'Total de Compra'</p>
+            <h1>UPDATE CONFIGURA SET A_USACOMBOPDV='SIM'</h1>
+            <p>// Gerar Conta a receber quando cheque for devolvido</p>
+            <h1>UPDATE CONFIGURA SET A_GRCONTARECCHDEV='SIM'</h1>
+            <p>// Adicionado campo no cadastro de produto, aba outros, para informar o percentual máximo de desconto aplicável, somente venda do interdata (Varsóvia).</p>
+            <h1>UPDATE CONFIGURA SET A_USAMAXDESCPROD='SIM'</h1>
+            <p>// Alterada rotina de alteração de funcionário da OS para que exija nível de acesso que grave log de ação de usuário (Refrio Cacoal).</p>
+            <h1>UPDATE CONFIGURA SET A_ALTFUNCITEMSERV='SIM'</h1>
+            <p>// Para funcionar KIT no PDV ->> 1= Pega o preço do produto na venda (Varejo, promoção, convenio) 2=Pega o preço informado no KIT</p>
+            <h1>UPDATE CONFIGURA SET I_TIPOPRECOKITPDV=2</h1>
+            <p>// Adicionada campo no cadastro de produto para definir preço do revendedor, ativo por banco de dados (D'Marca).</p>
+            <h1>UPDATE CONFIGURA SET A_USAPRECOREV='NÃO'</h1>
+            <p>// habilita módulo de produção Gráfica.</p>
+            <h1>UPDATE CONFIGURA SET A_USAPRDGRAFICA='SIM'</h1>
+            <p>// Habilita Módulo de Industrial Café Urupá</p>
+            <h1>UPDATE FIRMA SET A_INDCAFE='SIM'</h1>
+            <p>// Habilitar Encerramento de CAIXA</p>
+            <h1>UPDATE CONFIGURA SET A_ENCERRACX='SIM'</h1>
+            <p>// Habilita remessa de transferência bancária (Cooaprolim)</p>
+            <h1>UPDATE CONFIGURA SET A_REMESSAPAG='SIM'</h1>
+            <p>// Adicionada campo no banco de dados (I_TIPOIMPNFE) para configurar importação NF-e para limitar alguns recursos para utilização em versão simplificada. (O que muda...)<br>// 1 = Versão Completa<br>// 2 = Versão Simplificada<br>// Na importação simples não tem isso: Lançamento de Grade, Convenio, Semelhante<br>// Cadastro de Dados adicionais na formação de preço (Marca, Fabricante, Linha e Sub Linha)<br>// Validade, Controlado*/</p>
+            <h1>UPDATE CONFIGURA SET I_TIPOIMPNFE=1</h1>
+            <p>// Foi criado no banco de dados o campo I_TPVLRLICITACAO que quando estiver igual a 2, os itens serão agrupados conforme o valor que foi vendido no decorrer da licitação,<br>// tendo em vista que ele pode alterar o valor do produto.// se o I_TPVLRLICITACAO for diferente de 2, ele agrupará todos os produto vendidos na nota da licitação pelo valor atual do produto na licitação.</p>
+            <h1>UPDATE CONFIGURA SET I_TPVLRLICITACAO=2</h1>
+            <p>// Foi implementando no INTERDATA o menu cotação para cotação de produtos do fornecedor. Ativado via banco de dados. Tem Tem Supermercado</p>
+            <h1>UPDATE CONFIGURA SET A_USACOTACAOFORN='SIM'</h1>
+            <p>// Localizar cliente no inicio da venda do interdata D'Marca</p>
+            <h1>UPDATE CONFIGURA SET A_SELCLIINIVENDA='SIM'</h1>
+            <p>// Zera todo o estoque do Sistema</p>
+            <h1>update estoque<br>set N_QUANTATU = '0'<br>where N_QUANTATU < 0;<br><br>update estoquemov<br>set N_QUANTIA = '0'<br>where N_QUANTIA < 0;<br><br>update estoqparcial<br>set N_QUANTIA = '0'<br>where N_QUANTIA < 0; <br><br>update estoque<br>set N_QUANTATU = '0'<br>where N_QUANTATU > 0;<br><br>update estoquemov<br>set N_QUANTIA = '0'<br>where N_QUANTIA > 0;<br><br>update estoqparcial<br>set N_QUANTIA = '0'<br>where N_QUANTIA > 0; </h1>
+            <p>//Localizar Informações específicas nas Bases de Dados</p>
+            <h1>SELECT * FROM table_name<br>WHERE column_name BETWEEN '****/**/**' AND '****/**/**' AND I_VENDEDOR ='**';<br><br>SELECT SUM(column_name) FROM table_name<br>WHERE column_name BETWEEN '****/**/**' AND '****/**/**' AND I_VENDEDOR ='**';</h1>
+            <p>//Verifica a versão do sistema pela última nota fiscal emitida (O primeiro registro é o da última nota).</p>
+            <h1>SELECT A_VERSAOAPLICATIVO FROM NOTASFISCAL<br>ORDER BY I_CONTADOR DESC limit 1</h1>
+        </div>
+    </section>
+    <div class="rodape">
+        <h3>Todos os Direitos Reservados - HSF</h3>
+    </div><!--rodape-->
+    <script type="text/javascript" src="js/function.js"></script>
+</body>
+</html>

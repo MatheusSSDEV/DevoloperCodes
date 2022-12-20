@@ -1,0 +1,183 @@
+/*-------> ESTILO GERAL DO SITE*/
+*{
+    padding: 0;
+    margin: 0;
+    /*font-family: 'Dancing Script', cursive;*/
+    /*font-family: 'Roboto Mono', monospace;*/
+}
+
+.barr{
+    width: 100%;
+    height: 15px;
+    background-color: white;
+    box-shadow: 0px 0px 14px 4px #FFFFFF;
+}
+
+/*-------> Estilo Section Apresentação*/
+.Apresentacao{
+    width: 100%;
+    background-image: url("../images/base-texture\ backg.jpg");
+    background-size: cover;
+}
+
+.Apresentacao p{
+    color: white;
+    font-size: 20px;
+    font-family: 'Roboto Mono';
+}
+
+.part-1{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.part-1 p{
+    width: 50%;
+    padding: 40px;
+}
+
+.part-2{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 11%;
+}
+
+.part-2 p{
+    width: 50%;
+    padding: 40px;
+}
+
+.right-text-align{
+    text-align: right;
+}
+
+.img-center{
+    width: 100%;
+    text-align: center;
+    margin-top: 150px;
+}
+
+/*-------> Estilo Section Container-Content*/
+.container-content{
+    width: 100%;
+    height: auto;
+    background-image: url("../images/base-texture\ backg.jpg");
+    background-size: cover;
+    color: white;
+}
+
+/*-->STYLE GRID-AREA<--*/
+.parent{
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-areas:
+    ". dialogo dialogo dialogo ."
+    "foto realizacao linguagem faculdade qualificacoes"
+    "contato experiencias linguagem cursoprogrammer qualificacoes"
+    "adjetivos experiencias escola cursoprogrammer objetivos"
+    ". aboutme aboutme aboutme objetivos"
+    ;
+}
+
+.picture{ grid-area: foto;}
+.div2 { grid-area: contato;}
+.div3 { grid-area: adjetivos;}
+.div4 { grid-area: dialogo;}
+.div5 { grid-area: realizacao; background-color: red;}
+.div6 { grid-area: experiencias; background-color: green;}
+.div7 { grid-area: linguagem; background-color: red;}
+.div8 { grid-area: escola; background-color: green;}
+.div9 { grid-area: faculdade; background-color: red;}
+.div10 { grid-area: cursoprogrammer; background-color: green;}
+.div11 { grid-area: qualificacoes; background-color: red;}
+.div12 { grid-area: objetivos; background-color: green;}
+.div13 { grid-area: aboutme; background-color: red;}
+
+/*STYLES DIVS - GRID ITEMS*/
+.picture{
+    text-align: center;
+}
+
+.picture img{
+    width: 180px;
+    border-radius: 50%;
+}
+
+.div2{
+    padding: 20px 10px;
+}
+
+.div2 img{
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.div2 h2{
+    display: inline-block;
+}
+
+.div3 h1{
+    font-size: 30px;
+    color: white;
+    text-align: left;
+    text-align: center;
+}
+
+.div3{
+    width: 100%;
+}
+
+.div3-text{
+    width: 50%;
+}
+
+.div3-imgs{
+    width: 50%;
+}
+
+.div3 img{
+    width: 60px;
+    height: 60px;
+}
+
+.div3 p{
+    margin-top: 15px;
+    padding: 20px; 
+}
+
+.div4 img{
+    width: 800px;
+    height: 170px;
+}
+
+/*-------> Estilo RESPONSIVO - MEDIA QUERIES*/
+@media screen and (max-width: 950px){
+    .img-center img{
+        width: 500px;
+    }
+    .part-2{
+        margin-top: 22%;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .img-center img{
+        width: 300px;
+    }
+    .part-2{
+        margin-top: 26%;
+    }
+    .img-center{
+        width: 100%;
+        text-align: center;
+        margin-top: 200px;
+    }
+}

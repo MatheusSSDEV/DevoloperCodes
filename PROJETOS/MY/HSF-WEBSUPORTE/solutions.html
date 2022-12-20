@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <title>SOLUÇÕES - CORREÇÕES</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <header>
+        <div class="logomarca">
+            <img src="images/Logo_HSF.png" />
+        </div><!--logomarca-->
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cfgs.html">CFGS</a></li>
+                    <li><a href="sqls.html">SQLs</a></li>
+                    <li><a href="uteis.html">Úteis</a></li>
+                    <li><a href="aplicativos.html">Aplicativos</a></li>
+                    <li><a href="solutions.html">Solution for Bugs</a></li>
+                </ul>
+            </nav>
+        </div><!--menu-->
+        <div class="mobile-menu">
+            <img src="images/mobile.png">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cfgs.html">CFGS</a></li>
+                    <li><a href="sqls.html">SQLs</a></li>
+                    <li><a href="uteis.html">Úteis</a></li>
+                    <li><a href="aplicativos.html">Aplicativos</a></li>
+                    <li><a href="solutions.html">Solution for Bugs</a></li>
+                </ul>
+            </nav>
+        </div><!--mobile-menu-->
+        <div class="clear"></div><!--clear-->
+    </header><!--FIM DO HEADER-->
+    <section class="solutions">
+        <div class="icones">
+            <div class="baixar-subir">
+                <button onclick="topFunction()" id="myBnt"><img title="Volte ao topo" src="images/voltaraotopo.png"></button>
+            </div>
+        </div>
+        <div class="apresent-errors">
+            <div class="text-apresent-errors">
+              <br><br>
+              <h1>Local para erros do sistema, incoerências, rotinas estranhas, problemas comuns e incomuns.<h1>
+              <h3>Place for system errors, inconsistencies, strange routines, common and uncommon problems.</h3>
+            </div><!--text-apresent-errors-->
+            <div class="container-balls">
+              <div class="ball"></div>
+              <div class="ball"></div>
+              <div class="ball"></div>
+              <div class="ball"></div>
+              <div class="ball"></div>
+              <div class="ball"></div>
+              <div class="ball"></div>
+            </div><!--container-balls-->
+          </div><!--apresent-errors-->
+          <div class="errors">
+            <div class="common">
+              <h2>Erro MGV6 ao criar Banco de Dados</h2>
+              <img src="images/mgvsql.png"/>
+              <p><span>SOLUÇÃO:</span><br>PASSO 1: Verifique o serviço da Toledo Brasil e Microsoft SQL Server no services.msc, se estiverem parados, inicie todos e tente novamente;<br>PASSO 2: Não funcionando a primeira opção, será necessário desinstalar todos os serviços e aplicações do MGV6 e do Microsoft SQL Server, principalmente na sua versão 2014; PASSO 3: Com tudo reinstalado reinicie o Computador;PASSO 4: Agora comece novamente a instalar novamente o MGV6 ou MGV7 do inicio.</p>
+            </div><!--common-->
+            <hr class="hr1"/>
+            <div class="common">
+                <h2>Erro sistema ao fazer transferência<br>"Não foi possível gravar registro"</h2>
+                <p>Explicação: Ao tentar realizar transferência, informando o tipo de movimento, a conta bancária e o valor, clicando em gravar o sistema gera o comprovante mas logo em seguida aparece uma mensagem que NÃO FOI POSSÍVEL GRAVAR REGISTRO.<br><br>Isso acontece devido a existir na base do sistema, dois Terminais com o mesmo número de caixa, esse erro acontece devido a 2 registros, para não duplicar acontece esse erro.</p>
+                <p><span>SOLUÇÃO</span>:<br>Para corrigir é necessário voltar alguns packs e corrigir novamente, com isso o caixa vai atualizar na tabela terminais.</p>
+                <img src="images/transfrerror.png"/>
+            </div><!--common-->
+            <hr class="hr1"/>
+            <div class="common">
+                <h2>ERRO AO ABRIR O SISTEMA - UNIDRVUI.DLL</h2>
+                <img src="images/UNIDRVUI.png"/>
+                <p><span>SOLUÇÃO:</span><br>Pegar a UNIDRVUI.Dll e trocar a dll no caminho C:\Windows\System32\spool\drivers\x64\3</p>
+                <button><a title="DOWNLOAD UNIDRVUI.DLL" target="_blank" href="https://mega.nz/folder/06xjwCDQ#TrGXpKG-vXZMTcT1Nr5BMA"><img style="width: 30px; background-image: url('images/glitch.jpg');" src="images/baixar.png"></a></button>
+            </div><!--common-->
+            <hr class="hr1"/>
+            <div class="common">
+                <h2>Posto de Combustivel - exceção: Mismatch in datapacket</h2>
+                <img src='images/posto1.png'/>
+                <img src='images/posto2.png'/>
+                <img src='images/posto3.png'/>
+                <p><span>SOLUÇÃO</span><br>Quando aparecer 'O sistema nao conseguiu carregar os itens lançados', e só renomear o arquivo "VendaTempPC.cds" que fica na pasta C:\interdata\relatorios.</p>
+            </div><!--common-->
+              <hr class="hr1"/>
+            <div class="common">
+                <h2>Erro ao gravar configuração do Sistema</h2>
+                <img src="images/gravarconfig.png"/>
+                <img src="images/log.png"/>
+                <p><span>SOLUÇÃO:</span><br>Para solucionar esse problema é necessário voltar alguns packs e rodar novamente (InterAtualizador), depois registrar novamente as DLL's</p>
+            </div><!--common-->
+                <hr class="hr1"/>
+            <div class="common">
+                <h2>Evento não atende o Schema XML especifico - MANIFESTAÇÃO</h2>
+                <img src="images/3EB03F07B28632FCBEEE.jpeg"/>
+                <p><span>SOLUÇÃO:</span><br>Essa rejeição é quando voce tenta manifestar como "operação não realizada", e na descrição que voce informa, tem algum CARACTERE ESPECIAL. Retire as palavras com caractere especial e pronto!</p>
+            </div><!--common-->
+            <hr class="hr1"/>
+            <div class="common">
+                <h2>INICIAR REPLICADOR COM O WINDOWS</h2>
+                <p><span>SOLUÇÃO:</span><br>Tem um bat na útil DO INTERDATA<br>'Desabilita uac' executar como ADM<br>Depois vai nos programas que inicializa com Windows e marca status como Habilitado no Gerenciador de tarefas -> Menu inicializar -> Vai  localizar o replicador -> E mudar o status dele<br><br>DESLIGAR E LIGAR O COMPUTADOR, E ABRIR O PDV PARA VER SE DEU CERTO!</p>
+            </div><!--common-->
+            <hr class="hr1"/>
+            <div class="common">
+                <h2>Acesso de convidado no SMB2 e SMB3 desabilitado por padrão no Windows</h2>
+                <p>Você não pode acessar essa pasta compartilhada porque as políticas de segurança da sua organização bloqueiam o acesso de convidados não autenticados. Essas políticas ajudam a proteger seu computador contra dispositivos não seguros ou mal-intencionados na rede.<br><span>SOLUÇÃO:</span><br>Abra o Editor de Política de Grupo Local (gpedit.msc).<br>Na árvore de console, selecione Configuração do Computador > Modelos Administrativos > Rede > Estação de trabalho do LANMAN. Para a configuração, clique com o botão direito do mouse em Habilitar logons de convidados não seguros e selecione Editar.<br>Selecione Habilitado e selecione OK.</p>
+            </div><!--common-->
+            <hr class="hr1"/>
+            <div class="common">
+                <h2>Sistema Fechando Quando faz Nota de desagregação.</h2>
+                <p><span>SOLUÇÃO:</span><br>Reinstalar NETFRAMEWORK e pausar o Windows Update</p>
+            </div><!--common-->
+            <hr class="hr1"/>
+            <div class="common">
+                <h2>Concentrador para de responder: Não foi possível realizar a conexão com concentrador. Tentar novamente?</h2>
+                <img src="images/concentradorerror.png">
+                <p><span>SOLUÇÃO:</span><br>Para resolver essa questão, é preciso deixar o ip do computador fixo, e adicionar uma rota para o ip do concentrador, que provavelmente está em outra faixa ip.</p>
+                <p>Primeiro vá as propriedades do adaptador, na rede em que estiver conectado.</p>
+                <img src="images/propadap.png">
+                <p>Você irá entrar em propriedades do IPV4, e vai deixar o ip como fixo.</p>
+                <img src="images/ipv4.png">
+                <p>depois vai clicar em <span>CONFIGURAÇÕES AVANÇADAS</span> e vai adicionar um outro ip, da mesma faixa (NÃO COLOCAR O MESMO IP DO CONCENTRADOR) em que o concentrador está. Com isso o IP normal da máquina vai conseguir se comunicar com o concentrador.</p>
+                <img src="images/faixaip.png">
+            </div><!--common-->
+        </div><!--errors-->
+        <div class="clear"></div><!--clear-->
+    </section><!--solutions-->
+    <footer>
+        <div class="rodape">
+            <h3>Todos os Direitos Reservados - HSF</h3>
+        </div><!--rodape-->
+    </footer>
+    <script type="text/javascript" src="js/function.js"></script>
+</body>
+</html>

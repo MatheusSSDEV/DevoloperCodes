@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <title>CFGs Config</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="logomarca">
+            <img src="images/Logo_HSF.png" />
+        </div><!--logomarca-->
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cfgs.html">CFGS</a></li>
+                    <li><a href="sqls.html">SQLs</a></li>
+                    <li><a href="uteis.html">Úteis</a></li>
+                    <li><a href="aplicativos.html">Aplicativos</a></li>
+                    <li><a href="solutions.html">Solution for Bugs</a></li>
+                </ul>
+            </nav>
+        </div><!--menu-->
+        <div class="mobile-menu">
+            <img src="images/mobile.png">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cfgs.html">CFGS</a></li>
+                    <li><a href="sqls.html">SQLs</a></li>
+                    <li><a href="uteis.html">Úteis</a></li>
+                    <li><a href="aplicativos.html">Aplicativos</a></li>
+                    <li><a href="solutions.html">Solution for Bugs</a></li>
+                </ul>
+            </nav>
+        </div><!--mobile-menu-->
+        <div class="clear"></div><!--clear-->
+    </header><!--FIM DO HEADER-->
+    <section class="tags">
+        <div class="icones">
+            <div class="baixar-subir">
+                <button onclick="topFunction()" id="myBnt" title="Volte ao topo"><img src="images/voltaraotopo.png"></button>
+                <button><a title="DOWNLOAD INTERDATA.CFG" target="_blank" href="https://mega.nz/file/YrQ2ESIA#XLtJzgM9woeryZAtGHbsT4xELzFOlkKJOrrGhYwZ4Hc"><img src="images/baixar.png"></a></button>
+            </div>
+        </div>
+        <div class="tag-cfg">
+            <div class="tag-texto">
+                <h3>CFGs DO SISTEMA</h3>
+                <br><br><br><br><br><br><br>
+                <h1>[CAIXA]</h1> 
+                <p>TEM GAVETA=0</p>
+                <p>ANALISAR RET=0</p>
+                <p>DESLIGAR WIN=0</p>
+                <p>CLIENTES=0</p>
+                <p>PRODUTO=0</p>
+                <p>CODIGO=0</p>
+                <span>// Mostra campo Saldo anterior no caixa do interdata config sistema</span>
+                <p>SALDO ANTERIOR=1</p><br>
+                <span style="font-size: 20px;">//CONFIGURAÇÕES DO PIX - INTERDATA - PDV ON e OFF</span>
+                <h1>[GERAL]</h1>
+                <p>TransacoesAdicionaisHabilitadas=7;8;9;37;38;3985</p>
+                <h1>[CarteirasDigitais]</h1>
+                <p>HabilitaLeituraQRCode=1</p>
+                <h1>[Redes]</h1>
+                <p>HabilitaRedePicpay=1</p>
+                <span style="font-size: 20px;">//FIM DAS CONFIG PIX</span>
+                <h1>[CAIXA Nº]</h1>          
+                <p>CAIXA=7</p>
+                <h1>[ENCERRACX]</h1>
+                <span>// Adiciona campos para assinatura do operador de caixa e do conferente </span>
+                <p>Default=0</p>
+                <p>Imprimir Campo Assinatura=1</p>
+                <p>Detalhar Cartão=1</p>
+                <p>Detalhar Receber=1</p>
+                <span>// Adicionada configuração por CFG para que o sistema detalhe no relatório de fechamento de caixa das impressoras não fiscais e ECF se a venda no cartão foi feita no TEF ou POS. (Atacarejo)</span>
+                <p>Detalhar Tipo Transação Cartão=0</p>
+                <span>// Encerra o caixa a partir do ultimo encerramento realizado.</span>
+                <p>Usar Data do Último Encerramento=0</p>
+                <span>// é informada a data para realizar o encerramento do período.</span>
+                <p>Encerrar Por Periodo=0</p>
+                <p>Confere Movimento=True</p>
+                <p>TIPO QT DUPLICATA=1</p>
+                <h1>[Orçamento Vidraçaria]</h1>
+                <p>Forma de Pagamento=1</p>
+                <h1>[COBRANCA]</h1>
+                <span>// Benevides</span>
+                <p>Cadastro de Evento=1</p>
+                <span>// Adicionada opçao para marcar data da próxima cobrança em mais de um registro.</span>
+                <p>Tipo Data Próxima Cobrança=1</p>
+                <h1>[GERAL]</h1>
+                <span></span>
+                <p>RENEGOCIACAO=1</p>
+                <span>//Foi adicionado movimento Pix para Recebimentos e Vendas no relatório Caixa -> Caixa Diário Geral.</span>
+                <p>TIPO CAIXA DIARIO GERAL=1 ou 2<br>(Relojoaria Eska - Buritis)</p>
+                <span>//Foi adicionado movimento Pix para Recebimentos e Vendas no relatório Caixa -> Caixa Diário Geral.(Relojoaria Eska - Buritis)</span>
+                <p>TIPO CAIXA DIARIO GERAL=1<br><br>TIPO CAIXA DIARIO GERAL=2</p>
+                <span>//Foi adicionado o código das novas parcelas geradas no relatório de renegociação caso tenha gerado novas duplicatas que é gerado caso o cfg esteja ativado (Contas a Receber -> Renegociação).<br>//Foi adicionado o código das novas parcelas geradas na reimpressão do relatório de renegociação caso tenha gerado novas duplicatas que é gerado caso o cfg esteja ativado (Contas a Receber -> Clicar Botão Direito na Nova Parcela Gerada pela Renegociação -> Ver Detalhes da Renegociação). + um CFG na tag [RENEGOCIAÇÃO]</span>
+                <p>RENEGOCIACAO=1</p>
+                <span>// Foi criado cfg para disponibilizar na configuração do sistema uma forma de ativar a comissão
+                por meta que após cfg ativado será exibido nas</span>
+                <span>// Configurações -> Vendas -> Comissão -> Gerar Comissão por Meta Default 0 ***Versão Completa***</span>
+                <p>Usa Comissão Meta=1</p>
+                <span>// Foi implementado CFG para quando ativado em combinação com o módulo cotação, ao abrir o sistema irá abrir diretamente</span>
+                <p>Cotação Fornecedor=0</p>
+                <span>// quando =0 não fecha os aplicativos Sped ao fechar o sistema.</span>
+                <p>Fechar App Externo ao Sair=0</p>
+                <span>// Liberado relatório de mov. detalhada de produtos para o Benevides.</span>
+                <p>Rel. Mov. Det. Produto=1</p>
+                <span>// Relatorio de notas ficais de entrada.</span>
+                <p>Relatório Mensal Gás=1</p>
+                <span>// Ativa aviso de replicação no retaguarda interdata. Tempo em Minutos</span>
+                <p>Aviso Replicador=0<br>Tempo Verificação Replicador=120</p>
+                <span>// Módulo Industrial Café Urupá</span>
+                <p>Café Urupá=1</p>
+                <span>// Adicionada janela para cadastrar cotação do dolar, acessível pelo menu configurações, necessário Romaneio Teca estar ativo (Guaporé Teca)</span>
+                <p>Romaneio Teca=1</p>
+                <span>// Exibe msg avisando que não existem notas manifestadas.</span>
+                <p>Mensagem Manifestação NFe=0</p>
+                <span>// Adicionada configuração CFG para não focar no Grid da localização de produtos e estoque, para facilitar consulta com leitor de código de barras (Casa Aguiar)</span>
+                <p>Foco Grade Localização=1</p>
+                <span>// Adicionada rotina para que o sistema de opção de importar o XML da NF-e após o download na janela manifestação do destinatário, ativo por CFG</span>
+                <p>Importa XML Manifestação=1</p>
+                <span>// Adicionada configuração CFG para não exibir registros de estoque zerado na grade de estoque parcial da janela estoque e localização da produtos (Cageo Vet)</span>
+                <p>Mostrar Estoque Zerado=0</p>
+                <span>// Adicionada configuração CFG para definir ordem de impressão dos cheques no pagamento de contas (Central Laminações)</span>
+                <p>Ordem Impressão Cheque=A_NOMECLI</p>
+                <span>// Adicionado CFG para solicitar o usuário após o encerramento do caixa no Interdata e PDV (Mercado Vista Alegre)</span>
+                <p>Chama Usuário Encerra Caixa=1<br>GERA IMPOSTO NFE CUPOM=1</p>
+                <span>// Adicionada configuração CFG para alterar o tipo de exibição do estoque detalhado, para que exiba de acordo com a solicitação do cliente (Varsóvia) =2 // Nornal =1<br>// Estoque Total<br>// Vendido = Quantidade reservada na venda, esperando ser fechada no caixa remoto<br>// Reservado =
+                Quantidade reservada na ordem de serviço<br>// Estoque Disponível = Estoque Total - Vendido - Reservado</span>
+                <p>Tipo Estoque Detalhado=1</p>
+                <span>// Adicionada configuração por CFG para que ao abrir o INTERDATA o sistema avise se existem licitações com vencimento igual ou inferior a 30 dias (Andrade Mirante)</span>
+                <p>Aviso Vencimento Licitação=1</p>
+                <span>// não exige data de nascimento no cadastro do cliente</span>
+                <p>Valida Nascimento=1</p>
+                <span>// Benevides</span>
+                <p>Forma Personal=1</p>
+                <span>// Adicionada opção no cadastro de cliente e fornecedor para cadastrar o doc. padrão a ser emitido no PDV (Boleto "Não é boleto real, apenas tipo do documento" ou Duplicata), ativo por CFG (Atarejo
+                Preço Baixo)</span>
+                <p>Cad. Doc. Padrão PDV=1</p>
+                <span>// Foram realizadas alterações na tela de registro de ponto para que se possa registrar meio periodo.</span>
+                <p>Novo Ponto=1</p>
+                <span>// Foi criada uma copia da janela de Rel. de Grupo de Desp. Caixa para que o relatório fosse desenhado de acordo com a necessidade da Top Arts, adicionado check box para incluir ou não as transferências de caixa.</span>
+                <p>Rel. Grupo Desp. Detalhado=1<br>Deleta Log Venda Apos NF-e=1</p>
+                <span>// "Alterar Cliente NFC-e" = Pergunta ao usuário se ele deseja alterar os dados do cliente da NFC-e. Obs: Caso o código do cliente for menor ou igual a 1 nenhuma pergunta será exibida. D'Marca</span>
+                <p>Alterar Cliente NFC-e=1</p>
+                <span>// "NFC-e Sem Cliente" = Pergunta ao usuário se ele deseja informar o cliente na NFC-e. Obs: Caso o código do cliente for menor ou igual a 1 nenhuma pergunta será exibida.</span>
+                <p>NFC-e Sem Cliente=1</p>
+                <span>// Habilita para importar e referenciar o plano de conta para o SPED</span>
+                <p>Plano de Contas sped=1</p>
+                <span>//Adicionado CFG para que o sistema não calcule desconto ao passar um produto semelhante com quantidade de valor configurados (Agroterra Agropecuária).</span>
+                <p>Não calcular desconto em grupo barra=1</p>
+                <span>// Emitir NFCe depois de uma venda fechada (Nos terminais sem o CFG e habilitado caixa normal.)
+                Agroterra agropecuaria</span>
+                <p>Emite NFC-e Avulsa Venda=0</p>
+                <span>// Módulo de produção Somar CONFIGURAÇÃO POR BANCO DE DADOS.<br>// Adicionado janela para gerar relatório de mov. de cartões de vendas feitas no tef, acessivel pelo menu utilitários ativo por CFG ([Relatório TEF] para organizar)</span>
+                <p>Relatório TEF=1</p>
+                <span>Altera titulo do Atacado na janela de venda, estoque e localização de produtos. (Jacomin)</span>
+                <p>Altera Titulo Atacado=1</br>Titulo Atacado=Financia&mento</p>
+                <span>// Default=1 Não exigir informações do cheque na venda do interdata (Sulflex) Venda Interdata</span>
+                <p>Exige Dados do Cheque na Venda=0</p>
+                <span>// imprimir recibo de devolução de embalagens de agrotóxicos, menu utilitários (Agro campo)</span>
+                <p>Recibo Devolução Embalagem=0</p>
+                <span>// habilitar cadastro de referência para Empresa matriz no cadastro de fornecedores (Sulflex) para
+                    contas a receber vão para a matriz</span>
+                <p>Gerar Cobrança para Terceiro=1</p>
+                <span>// Configuração do benevides para não validar estoque de terceiro na venda.</span>
+                <p>Valida Estoque Prod. Terceiro=0</p>
+                <span>// Saude e vida - reimprimir boletos no contas a receber todos de uma determinada venda(obs só
+                    funciona com boletos gerados a partir das vendas)</span>
+                <p>Imprimir Boletos da Venda=1</p>
+                <span>// Benevides (=2 considera desconto somente em produtos que não estão em promoção) Banco de
+                    Dados</span>
+                <p>Tipo Desconto Promoção Venda=2</p>
+                <span>// habilita ou desabilita impressão de cupom não fiscal no contas a pagar e receber</span>
+                <p>CUPOM NAO FISCAL RECPAG=0</br>Siafro=1</p>
+                <span>// Renomeia o arquivo de exportação de boleto para aparecer 'Nome do cliente - número NF - Número
+                    Documento.pdf'</span>
+                <p>Renomear Arq. Pdf Boleto=1</p>
+                <span>// Refrio</span>
+                <p>Controle Manutenção ar condicionado=1</p>
+                <span>// Ativa a interação do sistema com Telefone</span>
+                <p>Pedido Bina=0</p>
+                <span>// 0 mostra os movimentos anteriores.</span>
+                <p>Data Inicial Fluxo Caixa Inovam=0</p>
+                <span>// Aparece opção para alterar a comissão do vendedor no momento da venda. (Inovam)</span>
+                <p>Altera Comissão Venda=0</p>
+                <span>// Mostra o tipo cheque no contas a pagar.</span>
+                <p>Tipo Cheque Pagar=1<br>email cat52=1</p>
+                <span>// Abre uma opção na venda para quando inserir o código do produto ele remover do
+                    condicional</span>
+                <p>Retorno de Condicional=1</p>
+                <span>// Maximiza janela de venda do interdata</span>
+                <p>Maximiza Venda=1</p>
+                <span>// Habilita Opções para inovam</span>
+                <p>Inovam=1</p>
+                <span>// No caixa remoto quando localiza o cliente e preciona seta para baixo, mostra o nome e o
+                    endereço do cliente</span>
+                <p>Exibe Endereço Fechamento Remoto=1</p>
+                <span>// LANO Adiciona novos tipos na tela de nova conta a receber.</span>
+                <p>Tipo NF e Cheque=1</p>
+                <span>// Ao gerar uma conta a receber quando seleciona o cliente se tiver vendedor vinculado carrega o
+                    mesmo</span>
+                <p>Lota Vendedor Gera Conta=1</p>
+                <span>// Relatório de vacinas IDARON implementada janela para impressão do relatório ficha de controle
+                    de vacinas, acessivel pelo menu utilitários.</span>
+                <p>Relatório de Vacinas=1<br>Livro Caixa=1<br>Consulta NCM=1<br>Aguardar Processo Daruma=0<br>Linhas
+                    Guilhotina Daruma=0</p>
+                <span>// Barros de santa luzia Implementado sistema de pontuação de colaboradores e troca de pontos por
+                    premios.</span>
+                <p>RELATÓRIOS GERENCIAIS=1<br>Custódia de Cheques=1</p>
+                <span>// Foi implementado módulo para controle de gastos de viagem para Transrolim - Posto Mirian.Foi
+                    implementado módulo para controle de frete para cominhões tanque para Transrolim - Posto
+                    Mirian.</span>
+                <p>Controle Viagem=1<br>Controle Frete=1</p>
+                <span>// alterada tela de renegociação de duplicatas para que ao gerar novas parcelas o campo valor
+                    total da duplicata corresponda ao total de todas as parcelas geradas.<br>// Por default o valor
+                    total correspondera ao Total da Renegociação, mas podendo ser alterado para o total do
+                    parcelamento.)<br>// 1=Total da Renegociação<br>// 2=Total do Parcelamento</span>
+                <p>Tipo Valor Total Duplicata Renegociação=1</p>
+                <span>// Habilita a nova tela de Cadastro de Produto Default Ativo</span>
+                <p>NOVO CAD PRODUTO=1</p>
+                <span>// Aumenta decimais no valor do produtos na venda.</span>
+                <p>Aumenta Decimais Venda=1<br>Aumenta Decimais Grupo Barra=1</p>
+                <span>// Foi implementado módulo de controle de comodatos.</span>
+                <p>Controle Comodato=1</p>
+                <span>// Habilita o Uso do banco de dados para foto de cliente e produto</span>
+                <p>DB Foto=1</p>
+                <span>// Habilita a opção no menu Utilitários para importação do arquivo de balanço</span>
+                <p>Importa Arquivo Balanço=1</p>
+                <span>// Habilita a validação para poder usar o mesmo número de caixa em vários computadores</span>
+                <p>Valida Número Caixa=0<br>Novo Reajuste=1</p>
+                <span>// 1= Quando filtro o principal exibe os similares 2= quando filtra um principal ou similar ele filtra os similares 3= na pesquisa de produto. Ex. Cadastrou o produto código 1 e adicionou o código 2, 3, 4, 5 e 6 como similar. ao localizar qualquer um deles, será exibido os demais como similares.</span>
+                <p>TP FILTRO PROD SIMILAR=3</p>
+                <span>// Habilita venda de farmacia popular no caixa remoto</span>
+                <p>Fp Caixa Remoto=1</p>
+                <span>// Habilita a opção para perguntar o tipo de documento a ser emitido</span>
+                <p>NF-e ou NFC-e=1<br>NF-e ou NFC-e Contribuinte=0</p>
+                <span>// Cooaprolim Habilita o módulo de cooperativa de Leite</span>
+                <p>Controle Leite=1</p>
+                <span>// Sugestão de Preço</span>
+                <p>SUGESTAO PRECO=1</p>
+                <span>// Sugestão de Compra</span>
+                <p>SUGESTAO COMPRA=1</p>
+                <span>// Módulo Santa Fé Habilita o módulo industrial para Vidraçaria</span>
+                <p>Vidracaria=1<br>Receber Com Data Anterior=1<br>Pagar Com Data Anterior=1<br>MDF-E=1</p>
+                <span>// Habilita a nova tela de envio do SNGPC</span>
+                <p>Enviando Sngpc=1</p>
+                <span>// Quando habilitado não funciona o acréscimo/desconto na forma de pagamento (Central Laminações)</span>
+                <p>Producao metalurgica=1<br>Tipo Relatório Mais Vendidos=2<br>Desconto Item Ecf=1<br>Cancelamento Item Ecf=0<br>PRODUCAO=USAR</p>
+                <span>// Habilita a opção do romaneio gado</span>
+                <p>romaneio gado=1</p>
+                <span>// Não permite incluir ncm que não esteja na lista do IBPT</span>
+                <p>BLOQUEIA NCM INCORRETO=0</p>
+                <span>// Habilita o aviso do ncm que não está na lista do IBPT</span>
+                <p>AVISO NCM INCORRETO=1</p>
+                <span>// Imprime desconto e cancelamento na ECF</span>
+                <p>Desconto Cancelamento Item=1</p>
+                <span>// Não gera itens de NF-e que tenha cupom no Sped Fiscal</span>
+                <p>GERA ITEM NFE CUPOM=0</p>
+                <span>// Habilita para abrir produto já selecinado e opções travadas quando solicidado alteração da Janela NF-e e Importação</span>
+                <p>ALTERA PRODUTO DIRETO=0</p>
+                <span>// Habilita o módulo de entrega quando envia a OS para o caixa</span>
+                <p>ENTREGA SERVICO=0</p>
+                <span>// Habilita a opção para não pedir o lote na venda. OBS.:Pede na fatura</span>
+                <p>PEDE LOTE VENDA=1</p>
+                <span>// habilita para aparecer na configuração do interdata.</span>
+                <p>classe de comissao=1<br>NOVA CONFIGURACAO=1<br>Valor Monetario=0</p>
+                <span>// Habilita o módulo de importação de nota fiscal eletrônica</span>
+                <p>importa nfe=1<br>novo servico=1</p>
+                <span>// Habilita o nova tela do módulo de faturamento</span>
+                <p>Novo Fatura=1<br>NFe de Imposto=1</p>
+                <span>// Habilita o Conhecimento de Transporte Eletrônico</span>
+                <p>cte=1<br>PRODUTO SIMILAR=1<br>ENVIANDO A NFE=1<br>RENEGOCIACAO=1</p>
+                <span>// Envia Email com xml para o contador cadastrado (NF-e e CT-e)</span>
+                <p>Envia Email Contabilista=0<br>NOVA ETIQUETA=1</p>
+                <span>// 1= Filtra todos os produtos independente do filtro realizado 2= Filtra de acordo com o que esta na grade</span>
+                <p>FILTRAR BALANCO=2</p>
+                <span>// Habilita o módulo de manifestação do destinatário</span>
+                <p>MANIFESTACAO NFE=1</p>
+                <span>// Composição de produto</span>
+                <p>PRODUCAO TRANSFORMACAO=1</p>
+                <span>// Habilita composição que só é necessário o minimo de informação.</span>
+                <p>Composição Genérica=1</p>
+                <span>// Habilita a Configuração para Nota Fiscal do Consumidor Eletrônica</span>
+                <p>NFC-E=1</p>
+                <br>
+                <p>EXATA=0<br>CHAT=0<br>MICRO ECF=<br>COD FORNECEDOR=0<br>DOMINGO=0<br>COM=COM2<br>DENSIDADE=4<br>ECAIXA=1<br>CONFIRMADUP=1<br>CONFIRMAPED=0<br>CONFIRMACAR=0<br>PAGSIMPLE=0<br>DESLIGADO=01/09/2020<br>Cor Calculados=0<br>CONFIRMACONTRATO=0<br>IMPRIMECONTRATO=0<br>ENTERCOD=0<br>USA GAVETA=0<br>ECF em Uso=0<br>IMP DUPLICATA NA ECF=0<br>AGRUPA ITEM VENDA=0<br>NOVO MENU=0<br>CLIENTE AVULSO=1<br>DIAS COBRANCA=0<br>TIPO ROMANEIO=0<br>Altera Vencimento Boleto=0<br>Tipo Loc Prod Kit=0<br>Tipo de Filtro da Sugestão de Compras=2<br>Calcular Saida Periodo=0<br>Agrupa Produto Sugestão de Compras=0<br>ATUALIZA PRECO VENDA=1</p>
+                <span>// =0 Desabilita a opção de auto preencher o CST ao selecionar a alíquota e CST de Pis/Cofins</span>
+                <p>COMPLETA TRIBUTACAO=1<br>Boleto Honorário=1<br>Numero Recibo=2</p>
+                <span>// Trunca ou arredonda o valor na venda do interdata</span>
+                <p>Truncamento=1<br>Usar Scroll na Barra de Rolagem do Grid=1<br>Envia Email Pedido Remoto=0<br>Realiza Conf. Caixa=0<br>Termo de Avalista=0<br>Confirma Termo de Avalista=0</p>
+                <span>// Sempre igual a 1 se der algum problema em MT colocar 0</span>
+                <p><span>;Valida HsfLib=0</span></p>
+                <h1>[Info Auto NFe]</h1>
+                <span>//Para realizar a referência entre Produto x Info Adicional é necessário vincular eles com o CFG abaixo<br>Ex: Código do Produto 1243 e o Código da Info Adicional 2<br>Ex: Código do Produto 9050 e o Código da Info Adicional 12</span>
+                <p>1243=2<br>9050=12</p>
+                <span>(Nutrimax Suplementacao Animal - São Miguel do Guaporé)</span>
+                <h1>[ENTREGA]</h1>
+                <span>// Adicionada opçao para solicitar usuário após concluir entrega.</span>
+                <p>Pedir Usuário=1</p>
+                <span>// Seleciona o entregador ao adicionar o item na entrega</span>
+                <p>Seleciona Entregador=1</p>
+                <span>// Benevides Opção de lançar requisição de produtos de terceiro na janela entrega ao adicionar item, gera compra e contas a pagar</span>
+                <p>Gerar Requisição de Compra=1<br>ARetirar=1<br>Próximo Registro Entrega=1<br>Relatório Entrega Balcão=0<br>Height=535<br>Width=775<br>Maximizado=1<br>Romaneio de Entrega=0</p>
+                <h1>[SOM]</h1>
+                <p>AVISSO=0</p>
+                <h1>[Relatorios]</h1>
+                <p>Previa Rel=1<br>Previa Notas=1<br>Previa Lista=1<br>Previa Carne=1<br>Previa Fiscal=1<br>Dialogo Rel=1<br>Dialogo Notas=1<br>Dialogo Lista=1<br>Dialogo Carne=1<br>Dialogo Fiscal=1<br>Relatorio=Microsoft XPS Document Writer<br>Faturas=Default<br>Produtos=Default<br>Extrato=Default<br>Pedido=Default<br>Rapido=LPT1<br>Agrupar Lista=0<br>NFCe=Default<br>Previa NFCe=0<br>Dialogo NFCe=0<br>Imp. Comp. Não Fiscal em Imp. Comum=1<br>Comp. Não Fiscal=Default<br>Previa Comp. Não Fiscal=0<br>Dialogo Comp. Não Fiscal=0<br>Usa Gaveta Spooler=0<br>Cheque=Default<br>Dialogo Cheque=1<br>Etiqueta=<br>Previa Etiqueta=1<br>Dialogo Etiqueta=1<br>Rom. Anot. Entrega=Default<br>Previa Rom. Anot. Entrega=1<br>Dialogo Rom. Anot. Entrega=1<br>Rom. Ctrl. Entrega=Default<br>Previa Rom. Ctrl. Entrega=1<br>Dialogo Rom. Ctrl. Entrega=1<br>Imp. Entrega Rural=Doro PDF Writer<br>Previa Entrega Rural=1<br>Dialogo Entrega Rural=1</p>
+                <h1>[CLIENTE]</h1>
+                <span>// Localizar cliente por fantasia/apelido no incremental. 0 - Desabilita 1 - Habilita</span>
+                <p>Localizar Fantasia Incremental=0<br>ULTIMA=1<br>LOCALIRZAR=1<br>INCREMENTAR=0<br>LOCALIZAR=0<br>Exibe Foto Cliente=1<br>Width=790<br>Height=553<br>Maximizado=0<br>Exibe Observações Cliente=1<br>Exibe Aviso Pré Cadastro=1</p>
+                <h1>[CONTA REC]</h1>
+                <p>PAGINA=2<br>Alterar Data Juros=1</p>
+                <h1>[PRODUTO]</h1>
+                <span>// Exibir a data de alteração do preço de venda ao invés da descrição na alteração de produtos.</span>
+                <p>Data de Alteração do Preço=1</p>
+                <span>// Adicionada configuração CFG para desabilitar validação de alíquota do pis e cofins no cadastro de produtos (Varsóvia)</span>
+                <p>Valida Pis Cofins=1</p>
+                <span>// Adicionada configuração CFG para desabilitar preenchimento automático e validação de pis cofins nas janelas de grupo de tributação e alt. de trib. por grupo de produtos (Varsóvia)</span>
+                <p>Pis Cofins Automatico=1</p>
+                <span>// Foi criado rotina para perguntar se deseja gerar etiqueta ao cadastrar um produto</span>
+                <p>Gera Etiqueta=1</p>
+                <span>// Foi criado um cfg que quando ativada a geração de etiqueta ao cadastrar um produto, é possível gerar a quantidade total de estoque cadastrado em etiquetas</span>
+                <p>Quantia Etiqueta Estoque=1<br>Atualiza Grupo Barra=1<br>TIPO lOC=0<br>INDCOR=1<br>CAD INFO ADICIONAL=0<br>EXIBE PROD SIMILAR=0<br>INCREMENTAL=0<br>CorEstoqNeg=clGray<br>CorEstoqMin=clLime<br>Exibe Foto=0<br>Exibe Foto Alteração=1<br>Tipo Filtro=1<br>Usa Cód. Barra=0<br>CAD REF FORNECEDOR=0<br>TAB ESTOQUE=0</p>
+                <h1>[TIPOCLI]</h1>
+                <p>LOCALIZAR=0</p>
+                <h1>[VENDA]</h1>
+                <span>//Foi implementado na tela de venda a tela de seleção de produtos vinculados que ao informar a quantidade de cada produto vinculado na tela e confirmar, todos os produtos são lançados. Necessário estar ativado produto vinculado. Necessário estar ativado o CFG Abaixo. Necessário que o produto informado tenham produtos vinculados para ser exibido a tela</span>
+                <p>Multi Seleção Vinculados=1</p>
+                <span>// Foi criada uma versão 2.5.0.593b, essa versão possui um CFG que habilita a possibilidade de abrir dois modelos de módulo de venda quando o posto de combustível estiver ativo, quando clicado sobre o botão de venda irá abrir um submenu com opções de venda de balcão e venda de posto.</span>
+                <p>Multiplas Janelas=1</p>
+                <span>// Opção para configurar ordenação da forma de pagamento da venda por nome.</span>
+                <p>Ordena Pag. Por Nome=1</p>
+                <span>// Alterada rotina de calculo de parcelas da espécie a prazo na venda para que arredonde as parcelas para evitar valores quebrados (Casa Esporte)</span>
+                <p>Arredonda Parcela=0</p>
+                <span>// Adicionada configuração CFG e nível de acesso para exibir valor e percentual de lucro ao lado do total de venda na aba lançamento de item, janela venda (Distribuidora Nova Geração)</span>
+                <p>Exibe Lucro=1</p>
+                <span>// Alterada rotina de calculo do preço do revendedor para que utilize o preço do varejo -12% caso não possua preço de revendedor cadastrado (D'Marca) É possível alterar o percentual por CFG, porém acredito que não será usado.</span>
+                <p>Perc. Desc. Atacado=25<br>Perc. Desc. Revendedor=50</p>
+                <span>// Adicionado CFG para que o sistema calcule um desconto interno para anular o ICMS ST da venda, e informando esse valor no campo desconto da NF-e (Café Urupa)</span>
+                <p>Aplica Desconto ST=1</p>
+                <span>// Adicionado CFG para desabilitar para filtro de cidade na janela de venda, inativo por default</span>
+                <p>Filtro por Cidade=0</p>
+                <span>// Adicinado CFG na tela de venda que permite que o tipo de preço seja alterado entre varejo e atacado mesmo após a venda ter sido aberta (Cageo Vet)</span>
+                <p>Alterar Tipo de Preço=0<br>Ordenar Venda Remota Decrescente=0<br>Ordenar Venda Remota por Data=0<br><br>Menu Serviço=1</p>
+                <span>// Adicionada configuração por CFG para que ao imprimir um orçamento de venda de dispositivo pela janela de caixa remoto o sistema marque o registro como impresso(Distribuidora Nova Geração)<br>// Adicionada configuração por CFG para que o sistema permita filtrar apenas vendas com orçamento não impresso, dando duplo clique sobre o label de venda remota(Distribuidora Nova Geração)</span>
+                <p>Usa Informação de Impressão DSP=1</p>
+                <span>// Adicionada configuração por CFG para habilitar modo de anotação simples de entrega no caixa remoto, de forma que o sistema faz apenas uma pergunta se quer ou não anotar entrega (Distribuidora Nova Geração)</span>
+                <p>Anotação Simples de Entrega=1</p>
+                <span>// Adicionada configuração por CFG para que o sistema apresente as observações da venda na aba de lançamento de itens (Distribuidora Nova Geração)</span>
+                <p>Exibe Observação no Lançamento de Item=0</p>
+                <span>// Corrige Lentidão no F7 venda remota.</span>
+                <p>Carrega Cliente Remoto=1</p>
+                <span>// Adicionada configuração por CFG para que o sistema altere o botão ECF na janela de venda remota para que ele imprima um relatório similar ao relatório de orçamento completo. (Sulflex/Distribuidora Nova Geração)</span>
+                <p>Imprime Orçamento Venda Remota=1</p>
+                <span>// Adicionada configuração por CFG habilitada por default para que o sistema jogue o cursor para último item após a inservação na janela de venda do interdata (Rose Confecções)</span>
+                <p>Último Item=1</p>
+                <span>// Adicionada configuração por CFG para que o sitema utilize o nome do cliente para preencher o campo titular de cartões e cheques na janela de venda do interdata(Benevides)</span>
+                <p>Usar Nome do Cliente como Titular=1</p>
+                <span>// Adicionado configuração por CFG para habilitar opção para piscar as observações do cliente no módulo de venda do interdata (Agroterra Agropecuária)</span>
+                <p>Piscar Observação=1</p>
+                <span>// Adicionada configuração por CFG para inverter os grupos Peças e Serviços<br>// do relatório de orçamento de serviço (Refrio - Cacoal)}</span>
+                <p>Inverte Relatório Orçamento=1</p>
+                <span>// verifica novamente se o produto possui estoque no momento do fechamento da venda</span>
+                <p>Valida Estoque Fechamento=1</p>
+                <span>// Abre janela para troca de usuário após finalizar uma venda no interdata</span>
+                <p>PedirSenha=0</p>
+                <span>// opção para não validar estoque no lançamento do item, porém se esta opção estiver marcada o sistema irá validar o estoque no momento em que o fechamento da venda for iniciada.</span>
+                <p>Valida Estoque Item=1<br><span>;Desabilita Valida Estoque=1</span><br>VAREJO=1<br>ATACADO=0<br>CFOP=5.405<br>INCREMENTAL=0<br>Usa Venda Codigo Remoto=1<br>Filtra Inicias=1<br>Destacar Produto Promoção=1<br>Usar Vale Troco=1<br>Calculadora Desconto Item=1<br>Observação Orçamento=1<br>Maximizado=0<br>Height=574<br>Width=800<br>Confirma Imp. <br>Danfe NFC-e=0<br>Val. Estoq. Item=1<br>Preço Padrão=1<br>REVENDEDOR=0<br>Digita Nome Forma=1</p>
+                <h1>[ALTERPROD]</h1>
+                <p>TIPO LOC=0</p>
+                <h1>[PONTO]</h1>
+                <span>// Foi adicionado CFG para configuração de segundos para aviso de mensagens do ponto. (Ex. Atraso ao registrar ponto)</span>
+                <p>Segundos Aviso=7</p>
+                <span>// Foi criado um CFG para realizar o calculo de horas trabalhadas semanais automaticamente de acordo com a carga horária do funcionário e o horário trabalho no sábado,<br>// por padrão é ativado a opção do cálculo, caso desativado será calculado como 220 horas mensais que era o padrão.</span>
+                <p>Calcula Carga Horária=1</p>
+                <span>// default 0 Tolerancia</span>
+                <p>Ignora Tol. Sábado=1<br>Ignora Tol. Domingo Feriado=1</p>
+                <span>// Adicionado calculo de minutos trabalhados ao sábados para gerar corretamente os relatórios do ponto. (Padrão 240 Minutos = 4 Horas)</span>
+                <p>Minutos Trabalho Sábado=240</p>
+                <span>// Calcula de acordo com o cadastro do funcionario</span>
+                <p>Calcula Expediente=1<br>Tolerancia=00:30<br>Entrada=00:10<br>Saida=00:00<br>Atraso=1<br>Aniversario=1<br>Aviso Antecipacao=1<br>Tolerancia Antecipacao=00:02</p>
+                <h1>[ESTOQUE]</h1>
+                <span>// Alterada janela de estoque para que apresente informações sobre as últimas quantidades compradas e vendidas do produto, ativo por CFG (Atacarejo Preço Baixo).</span>
+                <p>Exibe Info. Extra Produto=1</p>
+                <span>// Quantidade de Dias que é considerada para o filtro de compras e vendas do produto</span>
+                <p>Qt. Dias Filtro Info. Produto=90<br>TIPO LOC=1<br>Tipo Lista=0<br>Tipo Filtro=5<br>Exibe Foto=0<br>Maximizado=1<br>Width=1616<br>Height=886<br>Marcar Produto sem Estoque=1<br>Order Estoque=A_NPRODUTO</p>
+                <h1>[CONTAS]</h1>
+                <p>LOCALIZAR=2</p>
+                <h1>[CLIREC]</h1>
+                <p>CLILOC=0</p>
+                <h1>[CONTAREC]</h1>
+                <span>// Ao selecionar um cliente em contas a receber suas contas sejam totalizadas automaticamente.</span>
+                <p>Calculo Automático=1</p>
+                <span>// Implementada função de multi seleção de contas a receber na grade sem utilização do Ctrl, ativo por CFG e implementado apenas na versão do Delphi 10 (COMAC)</span>
+                <p>Multi Seleção=1<br>Marcar com Duplo Clique=1</p>
+                <span>// Adicionada configuração por CFG para alterar o tipo de marcação dos registros na grade da janela contas a receber (Comercial Simoura)<br>// Tipo 1 = Novo modelo, não corre os registros de acordo com o que vai selecionando na grade<br>// Tipo 2 = Antigo modelo, corre os registros de acordo com o que vai selecionando na grade</span>
+                <p>Tipo Marcação=1<br>CODIFICA CORES=0<br>ORDEM CONTAS=I_CONTADOR DESC<br>INCREMENTAL=0<br>Maximizado=1<br>Vencidas=1</p>
+                <h1>[RECNAOFISC]</h1>
+                <p>Recebimentos=05</p>
+                <h1>[EXPORTA]</h1>
+                <p>PATH ARQ TOLEDO=C:\TXITENS.TXT<br>DEPARTAMENTO TOLEDO=01<br>PATH ARQ FILIZOLA=C:\CADTXT.TXT<br>DEPARTAMENTO FILIZOLA=<br>Validade Toledo=0<br>Validade Filizola=1</p>
+                <h1>[COMPED]</h1>
+                <p>TIPO LOC=0<br>SINCRONIZA PREÇO=1</p>
+                <h1>[PERDAS]</h1>
+                <p>OPÇÃO PESQUISA=4<br>CFOP=5.927<br>USAR CORES=0<br>OPÇÃO PREÇO=2</p>
+                <br>
+                <span>// Configuração Café Quentinho.</span>
+                <h1>[63]</h1>
+                <p>CST=40<br>Alíquota=0<br>CFOP=5920</p>
+                <h1>[34-5920]</h1>
+                <p>CST=20<br>Alíquota=17,50<br>CFOP=5920<br>Usa Trib. NFC-e=0</p>
+                <h1>[37-5656]</h1>
+                <p>CST=60<br>Alíquota=0<br>CFOP=5656<br>Usa Trib. NFC-e=1</p>
+                <h1>[37-5920]</h1>
+                <p>CST=40<br>Alíquota=0<br>CFOP=5920<br>Usa Trib. NFC-e=1</p>
+                <span>// Implementado tabelas que constam produtos e cnpj do decreto 24051 para emissão de NF-e, ativo por CFG. Ao emitir uma NF-e cujo produto esteja listado na<br>// tabela do decreto e possuir um CFOP, CST e Alíquota configurado no CFG o sistema irá obedecer essa configuração, e caso o destinatário possua o CNPJ<br>// também constante na lista o sistema irá levar em consideração uma configuração especifica no CFG para as empresas listadas.</span>
+                <h1>[Decreto 24051]</h1>
+                <p>CFOP Empresa=5102</p>
+                <span>// 101</span>
+                <p>CST Empresa=00<br>Alíquota Empresa=17,5<br>CFOP=5405</p>
+                <span>// 500</span>
+                <p>CST=60<br>Alíquota Empresa=0</p>
+                <h1>[NFe]</h1>
+                <span>//Foi criado configuração para que verifique os vinculos dos códigos dos produtos e das informações adicionais para que seja referenciado automaticamente na NF-e</span>
+                <p>Info Adicional Auto=1</p>
+                <span>// Implementado tabelas que constam produtos e cnpj do decreto 24051 para emissão de NF-e, ativo por CFG. Ao emitir uma NF-e cujo produto esteja listado na<br>// tabela do decreto e possuir um CFOP, CST e Alíquota configurado no CFG o sistema irá obedecer essa configuração, e caso o destinatário possua o CNPJ<br>// também constante na lista o sistema irá levar em consideração uma configuração especifica no CFG para as empresas listadas.</span>
+                <p>Decreto 24051=1</p>
+                <span>// Adicionada configuração CFG para utilizar tributação auxiliar para NF-e e NFC-e com base no código do produto e CFOP<br>// Se for utilizar essa configuração é interessante não utilizar a configuração de CFG somente por CST, pois pode gera conflitos dependendo dos dados configurados.</span>
+                <p>Tributação Alternativa=1</p>
+                <span>// [CodProduto-CFOP]<br>// CST="CST"<br>// Alíquota="Alíquota"<br>// CFOP="CFOP" <- igual o de cima<br>// Usa Trib. NFC-e="1 ou 0"<br><br>// Adicionada config. CFG para que o sistema também aplique a config. CFG de CST/CFOP/Alíq. em contribuintes do ICMS, não somente em consumidor final (HSF Software)</span>
+                <p>Usa Config. CST Contribuinte ICMS=1</p>
+                <span>// Existe uma mensagem de confirmação ativa por padrão, mas que pode ser removida por CFG =1 DEFAULT</span>
+                <p>Confirma Cancelamento Venda=0</p>
+                <span>// Alterada rotina de emissão da NF-e de estorno, para que caso seja referente a NF-e de uma venda o sistema pergunte se deseja estornar a venda, ativo por CFG</span>
+                <p>Pergunta Estorno Venda=1</p>
+                <span>// Adicionado configuração CFG para que o sistema preencha os dados do transportador com informações do cliente caso ele seja de outro estado, ao clicar no botão gerar nota (Posto Soberana)</span>
+                <p>Usar Cliente Como Transportador=1</p>
+                <span>// Seleção de vendas... NFe Saída (Posto Soberana)</span>
+                <p>Agrupa Itens=1</p>
+                <span>// Observações NFe= Funrural no valor de @VALORFUNRURAL referente a alíquota de @ALIQUOTAFUNRURAL</span>
+                <p>Calcula Funrural=1<br>Alíquota Funrural Física=1,5<br>Alíquota Funrural Jurídica=2,5</p>
+                <span>// Habilita o regime especial no cadastro do fornecedor e define na tag 'nfe' o CST do regime especial. 51 é default</span>
+                <p>CST Regime Especial=51</p>
+                <span>// Exigir nome do transportador, peso bruto e peso líquido quando for emissão de NF-e para fora do estado (D'Marca)</span>
+                <p>Exigir Dados do Transportador Interestadual=0</p>
+                <span>// 0 não calcula icms st para vendas fora do estado. (inovam)</span>
+                <p>Icms ST Interestadual=1</p>
+                <span>// exibe msg do imposto da nfe totalizado (Lano da Amazônia)</span>
+                <p>Totalizar Imposto Mensagem IBPT=1</p>
+                <span>// Não Calcular ICMS ST na venda nem na NFe quando o cliente for consumidor final</span>
+                <p>Icms ST Consumidor Final=1<br>Tipo Visualização Duplicata=2<br>{Visualização Personalizada (Configuração)<br>-@NUMBOLETO = Número do Boleto caso exista<br>-@DUPLICATA = Código da Duplicata/Boleto<br>-@NUMNOTA = Número da Nota Fiscal cadastrado no Contas a Receber<br>-@PARCELA = Número da Parcela ex: 3/10<br><br>-Uma mensagem qualquer pode inclusa e uma das variáveis acima pode ser configurada.<br>-Ex: Nº Boleto: @NUMBOLETO / Nº Parc.: @PARCELA<br>   }<br><br>Visualização Personalizada=Doc:@DUPLICATA @PARCELA, Boleto:@NUMBOLETO Venc.<br><br>Referencia NFCe=1<br>Referencia NFCe Info. Adicional=1</p>
+                <span>// Para rejeição de grupo de icms para a UF</span>
+                <p>Grupo de ICMS para outra UF=1<br><br>NFe Uso e Consumo=1<br>CST Uso e Consumo=41<br>Exibe Crédito Simples=1<br>Mensagem Crédito Simples=Crédito ICMS no valor de: @valor</p>
+                <span>// não gerar crédito de icms do simples nacional para pessoas físicas, de acordo com Art. 23 Lc 123/06.</span>
+                <p>Credito Simples Pessoa Física=1<br>NFe Perda=1<br>CST Perda=41<br><br>Frete=1<br>Pagamento=-1<br>Modelo=1<br>Serie=0<br>TipoDoc=1<br>FormatoImpress=0<br>TipoEmissao=0<br>Ambiente=1<br>Finalidade=0<br>ProcEmissao=0<br>VersaoAplic=2.5.0.612</p>
+                <span>// Habilita opção para emissão de NF-e de imposto para o Estado</span>
+                <p>NFe de Imposto=1</p>
+                <span>// Habilita opção para emitir nota tributada em empresas simples nacional (Devolução para fornecedor)</span>
+                <p>NFe Devolução Regime Normal=1</p>
+                <span>// Habilita emissão de NF-e sem destaque de imposto caso CFOP seja de simples faturamento 5922 6922</span>
+                <p>NFe Simples Faturamento=1</p>
+                <span>// CST padrão para NF-e de simples faturamento</span>
+                <p>CST Simples Faturamento=41<br>EnviaServico=0<br>Incluir Peso=0<br>Cfop Estado= .<br>Cfop Fora Estado= .<br>Cfop Exterior= .<br>Validar IE=0<br>Maximizado=1<br>Height=592<br>Width=781<br>Editar Email=1<br>Cód. Info. Adc.=1<br>Filtro Venda=1<br>Usa Cliente Transportador Outra UF=0<br>Multi Seleção=1<br>Atualiza CFOP Total=0<br>Remove Caracteres Especiais e Acentuação Info. Adc.=1</p>
+                <h1>[IMPORTA NFE]</h1>
+                <span>// Adicionada campo no banco de dados (I_TIPOIMPNFE) para configurar importação NF-e para limitar alguns recursos para utilização em versão simplificada. (O que muda...)<br>// 1 = Versão Completa<br>// 2 = Versão Simplificada<br>// Na importação simples não tem isso: Lançamento de Grade, Convenio, Semelhante<br>// Cadastro de Dados adicionais na formação de preço (Marca, Fabricante, Linha e Sub Linha)<br>// Validade, Controlado*/<br><br>// Adicionada configuração por CFG para desabilitar o carregamento do Icms de Compra da NF-e no calculo de formação de preço, default ativo (Mercado Fortaleza)</span>
+                <p>Carrega Icms Compra NFe=0</p>
+                <span>// Adicionada rotina na importação de NF-e para que ao importar uma NF-e com itens com CFOP 5922, 6922 (Entrega Futura) o sistema não altere tributação nem de entrada no estoque, ativo por CFG (Atacarjo Preço Baixo)</span>
+                <p>NF-e de Entrega Futura=1</p>
+                <span>// Adiciona um campo na grade no importa com a descrição do produto na NFe</span>
+                <p>Mostrar Descrição Original do Produto=1<br><span>;Url Consulta=</span></p>
+                <span>// Adicionada configuração por CFG para que ao importar NF-e o sistema atualize o produto produto semelhante com base no preço de atacado e qtde e embalagem.</span>
+                <p>Atualiza Preço Caixa Grupo Barra=0</p>
+                <span>// O sistema cadastra o código de barras que veio na nota no grupo Barra - Semelhante (Benefides)</span>
+                <p>Cad. Cod. Barra Anterior=0</p>
+                <span>// Diretório para Salvar notas de entrada importadas.</span>
+                <p><span>;Diretório Padrão=\\felipe\Livre\Importa NF-e</span></p>
+                <span>// Default=0 Grava as alterações do importa sem ter que clicar em sair.</span>
+                <p>Grava Dados Geral=1</p>
+                <span>// Pergunta se a importação é de uma NFe de Uso e consumo o sistema irá zerar icms e icms ST dos produtos. e o CST que sera utilizado quando a nota for uso e consumo</span>
+                <p>NFe de Uso e Consumo=1<br>CST de Uso e Consumo=90</p>
+                <span>// Lança contas a pagar manual no final do faturamento.</span>
+                <p>Duplicata Manual=1</p>
+                <span>// Adicionado campo Qtde Embalagem na grade da janela da importação de NF-e.</span>
+                <p>Grava Qtde Embalagem=0<br>Recalcula Margem=1<br>Calcula Margem na Grade=1</p>
+                <span>// Se for igual a 1 quando o produto é sincronizado(Abrir Cadastro de Produto) pega o do cadastro de produto.</span>
+                <p>Incluir IPI na Sincronização=0</p>
+                <span>// Se for igual a 1 quando o produto é sincronizado(Abrir Cadastro de Produto) pega o do cadastro de produto.</span>
+                <p>Incluir Frete na Sincronização=0<br>Usa Preço Compra Sis=0</p>
+                <span>// cadastra a referencia do fornecedor no produto ao finalizar a importação.</span>
+                <p>Referência Automática=1</p>
+                <span>// Utiliza o nome para sincronizar o produto na importação</span>
+                <p>Sincronizar pelo nome=0</p>
+                <span>// atualiza preço do produto semelhante na importação aparecendo o campo vlr. Caixa. na grade</span>
+                <p>PRECO GRUPO BARRA=1</p>
+                <span>// grava o Nº da NF-e no campo Nº Doc. do contas a pagar.</span>
+                <p>Usar Nº NF-e na Duplicata=1</p>
+                <span>// Caso o produto importado tem cadastro no grupo de barras o mesmo seja referênciado de forma automática.</span>
+                <p>Sincroniza Grupo Barra=0</p>
+                <span>// Mostra as opção de de Fabricante, Marca,Unidade será atualizado as unidades que existão cadastradas no sistema LInha e sub linha na formação de preço</span>
+                <p>Cad. Info. Adc. Produto=1</p>
+                <span>// Opção para que o sistema grave o código do produto do fornecedor ao cadastrar produto no campo cód. original do sistema.</span>
+                <p>Grava Codigo Fornecedor=1</p>
+                <span>// alterar decimais do preço de compra na verificação de alteração de preço de compra na importação de NF-e, com default 2 decimais.</span>
+                <p><span>;Decimais Diferença de Preço=2</span></p>
+                <span>// Habilita a opção para perguntar se desejar imprimir etiquetas após fazer faturamento pelo IMPORTA NFE</span>
+                <p>Imprimir Etiquetas=1<br>Forma Preço Automatico=0<br>Converte Unidade Automatico=0</p>
+                <span>// Habilita o desconto de desoneração no preço de compra</span>
+                <p>Descontar Icms Desoneração=1</p>
+                <span>// Opção para calcular o frete sobre os produtos na importação de NF-e ao carregar nota ou consultar.</span>
+                <p>Calcular Frete=1</p>
+                <span>// Default 1 Caso a configuração CFG de calculo do frete esteja configurada como 2, o sistema preenche o campo frete do item para facilizar visualização (Mercado Fortaleza) 2=Calcula frete encima do valor da NFe</span>
+                <p>Tipo Calculo Frete=2</p>
+                <span>// Mostra Valor do frete na grade do importa</span>
+                <p>Atalho Frete=1<br>Grava Cod. Fornecedor=1<br>Teste=0<br><span>;Tipo ICMS Compra=1</span></p>
+                <br>
+                <span>// Tipo 1 Utiliza o ICMS de compra do cadastro do produto<br>// Tipo 2 Inclui ICMS ST e Desconto no preço de compra e Desoneração<br>// Tipo 3 = Tipo 1 + Tipo 2<br>// Tipo 3 ALTERA o preço no cadastro de produtos. Calculo o ICMS de compra para formar o custo.</span>
+                <p>TIPO FORMACAO PRECO=2<br>ATUALIZA PRODUTO=1<br>ATUALIZA NCM=1<br>MOSTRA LINHA GRADE=1<br>CorProdNaoSinc=$00E2E2E2<br>CorProdSinc=$00AAFFAA<br>CorProdFormaPreco=$00FFB871<br>CorProdConvUnid=$0080FFFF<br>CorProdConvUnidFormaPreco=$008080FF<br>Maximizado=1<br>ATUALIZA CEST=1</p>
+                <h1>[GAVETA AVULSA]</h1>
+                <p>PORTA SERIAL=-1<br>USAR=0</p>
+                <h1>[POSTO]</h1>
+                <span>//Realizado correção no Estorno de Doc. Crédito do Posto que possuia um erro na verificação de cartão já baixado durante o estorno do mesmo<br>(Cadastros -> Consulta Doc. Crédito Cliente -> Estornar)<br>*Necessário estar ativado Posto no FIRMA</span>
+                <p>Doc. Crédito=1</p>
+                <span>// Gera LMC automaticamente ao abrir o sistema-----> Banco de DADOS A_LMCAUTO='SIM'</span>
+                <p><span>;Gera LMC Auto=1</span></p>
+                <span>// Gera LMC de todos os combustiveis quando habilitado 'Gera LMC Auto'</span>
+                <p>;Gera LMC Auto Todos=0</p>
+                <span>// Adicionada configuração para que seja apresentado no relatório de fechamento Imp. Não Fiscal e Spooler o total de doc. de crédio lançado (Posto Avenida)</span>
+                <p>Total de Doc. de Créd. Lançado Rel. Fechamento=0<br>Titulo Forma Pag=Clica Aqui Abestado(Forma Pag.)<br>LMC SEM VENDA=1</p>
+                <span>// Opção para abrir o modulo de posto em um terminal sem comunicar com o concentrador.</span>
+                <p>Conecta Concentrador=0<br>Qtde Decimais=3</p>
+                <span>// Pergunta se quer imprimir danfe quando serial</span>
+                <p>Habilita Conf. Impressao Danfe NFC-e=1</p>
+                <span>// Tipo Desc. Acrés. Classe<br>// =3: é para licitação não mostra como desconto e pega como valor desconto no item<br>// =2: Mostra como desconto e pega como valor, desconto no subtotal<br>// =1: mostra como desconto e pega como percentual, desconto no subtotal</span>
+                <p>Tipo Desc. Acrés. Classe=3</p>
+                <span>// data utilizada das notas de entrada no lmc 1: data pedido 2: data entrega</span>
+                <p>Tipo Data LMC=2<br>NF-e ou NFC-e Contribuinte=0<br>NF-e ou NFC-e=1</p>
+                <span>// Habilita geração de relatório Gerencial de Imposto caso a informação não caiba no cupom fiscal</span>
+                <p>Relatório Gerencial Imposto=0</p>
+                <span>// Habilita opção de escolher entre imprimir NF-e ou Cupom fiscal ao fechar venda</span>
+                <p>NF-e ou Cupom=1</p>
+                <span>// Habilita relatório detalhado no fechamento de caixa 1,2,3</span>
+                <p>Relatório Detalhado Caixa=1<br>Tipo Relatório Detalhado=2<br>Imp Lista Produto=1<br>Imp Duplicata=1<br>Imp Duplicata Ecf=0<br>Usar Venda A Prazo=0<br>Previsualizar Imp=0<br>Selecionar Imp=0<br>Preset=1<br>Imp Info Cliente Avulso=1<br>Imp Info Veiculo=1<br>Valor Monetario=1<br>Agrup. Máx. Abastecimento=99<br>Usar Gaveta=0<br>Tipo Gaveta=-1<br>Concentrador=1<br>Incremental=0<br>Ordem Filtro Prod=<br>Maximiza=1<br>Altura Grid Abast=198<br>Largura Janela=790<br>Altura Janela=559<br>Loc. Cliente Fechamento=1<br>Tempo Atualização=2<br>IP=localhost<br>Porta=5123<br>Event Porta=5124<br>Atualização Automatica=1<br>Conf. Impressão Danfe NFC-e=1<br>Ponto Estoque=1<br>Troco Cartão=0<br>Doc. Crédito=1<br>Imp. Doc. Crédito Termica=0<br>Imp. Doc. Crédito Comum=1<br>Tipo Icone Bico=0<br>Botão Trans. de Ponto de Estoque=1<br>Valor Mínimo Doc. Crédito=0<br>Sangria Geral=1<br>Bloquear Dif. Preço=0<br>Diferença Máxima=10<br>Pedir Frentista=1<br>Filtro por Frentista=1<br>Focar Dinheiro no Fechamento=0<br>Selecionar Varios Itens=0<br>Focar Parcelamento=0<br>Conf. Impressão Duplicata=1<br>Conf. Impressão Lista de Produtos=1<br>Usa Inforlub=0<br>Usa Carta Frete=0<br>Chama Usuário Encerra Caixa=0<br>Mostrar Desconto Sugerido=0<br>Não Verificar Limite e Conta No Cartão=0<br>Exigir Seleção Frentista=0<br>Exigir Senha Seleção Frentista=0<br>Exigir Senha Item Avulso=0<br>Exibe Assinatura NFC-e A Prazo=0<br>Exibe Alerta Abastecimento Dif. Horário=0</p>
+                <h1>[ORCAMENTO]</h1>
+                <p>MARCA=1</p>
+                <h1>[SPED0]</h1>
+                <p>Bloqueia NFCe Pendente=0<br>Bloqueia NFCe Faixa=0<br>Verificar HD=1<br>Exportação Dominio=1<br>Habilita Geração Item NFCe=1<br>Incluir Icms ST no Total da NF-e=1<br>Bloco K=1<br>Reg C113=1<br>K200=0<br>C170=0<br>Reg C197=1<br>Reg C197<br>Entrada=0<br>Reg D197=0<br>Finalidade do arquivo=0<br>Atividade da empresa=1<br>Tipo do arquivo=1<br>Cód. Receita Sped Fiscal=1212<br>Reg E200=0<br>Email Resposta=geovanevdm@hotmail.com<br>Email Contador=0<br>Reg C170=0<br>Gera Crédito CST 10 e 70=0<br>Gera Item NFCe=0<br>Handle Fiscal=657146<br>Handle=657008<br>Versão Sped Fiscal=013<br>Versão Sped Contribuições=004</p>
+                <h1>[SPED1]</h1>
+                <span>// Adicionada configuração CFG para que produtos combustiveis utilizem o estoque do LMC para Sped Fiscal com inventário de estoque (Auto Posto Sabrina)</span>
+                <p>Usa Estoque LMC=1<br>Zera Plano Inventário=1<br>Bloqueia NFCe Faixa=0<br>Bloqueia NFCe Pendente=0<br>Bloco k=1<br>Reg C197=1</p>
+                <span>// Verifica se existe nfce pendente. e não deixa gerar.</span>
+                <p>Valida NFCe=1<br>Valida Faixa NFCe=1<br>Exportação Dominio=1<br>Zera Valor E200=1</p>
+                <span>{ Habilita envio do arquivo Sped Fiscal para o email do Contador }</span>
+                <p>Email Contador=0</p>
+                <span>{ Email de Resposta :-P}</span>
+                <p>Email Resposta=geovanevdm@hotmail.com<br>Finalidade do arquivo=0<br>Atividade da empresa=1<br>Tipo do arquivo=1<br>Reg E200=1<br>Cód. Receita Sped Fiscal=999<br>Reg C170=0<br>Gera Crédito CST 10 e 70=1<br>Incluir Icms ST no Total da NF-e=1<br>Gera Item NFCe=0<br>Handle=1509644<br>Versão Sped Contribuições=005<br>Versão Sped Fiscal=014<br>Tipo Data Entrega Extemporânea=2</p>
+                <h1>[SPED]</h1>
+                <p>Código Ajuste=2<br>Descrição Ajuste=CREDITO DE ICMS REMETENTE SIMPLES NACIONAL<br>Código C197=2<br>Descrição C197=CREDITO DE ICMS REMETENTE SIMPLES NACIONAL<br><br>Zera Cliente Sem CPF=1</p>
+                <span>// Verifica se existe nfce pendentes. Exibe Pergunta porém libera a geração.</span>
+                <p>Valida NFCe=0</p>
+                <span>// Quando a verificação do cfg 'Valida NFCe' está ativa e o de bloqueio está ativo ele não permite gerar sped com notas pendentes</span>
+                <p>Bloqueia NFCe Pendente=1</p>
+                <span>// Valida se existe quebra na sequencia das notas autorizadas. Exibe Pergunta porém libera a geração.</span>
+                <p>Valida Faixa NFCe=0</p>
+                <span>// Quando a verificação do cfg 'Valida Faixa NFCe' está ativa e o de bloqueio está ativo ele não permite gerar sped com notas fora de sequencia</span>
+                <p>Bloqueia NFCe Faixa=1<br>Exportação Dominio=1<br>Finalidade do arquivo=0<br>Atividade da empresa=1<br>Tipo do arquivo=1<br>Versão Sped Fiscal=014<br>Bloco k=1<br>Cód. Receita Sped Fiscal=1212<br>Reg E200=1<br>Versão Sped Contribuições=006<br>Reg C170=0<br>Reg C113=1<br>Gera Item NFCe=0<br>Reg C197=1<br>Gera Crédito CST 10 e 70=1<br>Handle=1116630<br>Tipo Data Entrega Extemporânea=2<br>Classific. do Estabelecimento=-1<br>Zera Cliente Sem Dados=1</p>
+                <h1>[SPED PIS COFINS]</h1>
+                <p>Valida NFCe=1<br>Valida Faixa NFCe=1<br>Código Natureza Padrão=001<br>04-320101001=001<br>04-810101001=001<br>04-820101034=001<br>04-820101015=001<br>04-320102002=001<br>Bloco k=1</p>
+                <span>{Habilita envio do arquivo Sped Contribuições para o email do Contador}</span>
+                <p>Email Contador=0</p>
+                <span>{Email de Resposta :-P}</span>
+                <p>Email Resposta=geovanevdm@hotmail.com<br>Gera Bloco P=0<br>Tipo Escrituracao=0<br>Situacao Especial=0<br>Natureza Pessoa Juridica=0<br>Atividade Preponderante=2<br>Incidencia Tributaria=0<br>Metodo de apropriacao=0<br>Tipo de contribuicao=0<br>Codigo Atividade CPRB=<br>Aliquota CPRB=<br>Código CPRB DCTF=<br>Codigo Indidencia Tributaria=0<br>BC PIS COFINS INDEPENDENTE=0<br>CST Pis Cofins CTe=<br>Alíquota Pis CTe=0<br>Alíquota Cofins CTe=0<br>Handle=330514<br>Indicador do Critério=-1<br>Tipo Data Entrega Extemporânea=1<br>Tipo Data Emissão Extemporânea=2<br>Alíquota Pis 05=0<br>Alíquota Cofins 05=0</p>
+                <h1>[PAGNAOFISC]</h1>
+                <P>Pagamentos=06</P>
+                <h1>[AVISO]</h1>
+                <p>SPED FISCAL=0<br>SPED PIS COFINS=0<br>CAT-52=0<br>ULTIMO CAT-52=06/05/2019<br>ULTIMO SPED F=14/08/2020<br>ULTIMO SPED PC=03/07/2020<br>CHEQUE VENCIDO CLIENTE=0<br>CONTA PAGAR=0<br>Produtos Vencidos=0</p>
+                <h1>[TEF]</h1>
+                <span>// Alterada rotina de impressão do cupom TEF por spooler para respeitar configuração CFG de não exibir mensagem de confirmação de impressão (Supermercado Guaporé) default 0</span>
+                <p>Confirmação Impressora Não Fiscal=1<br>TEF Pagamento=1<br>Tipo Cupom Tef Não Fiscal=1<br>TEF Cartão=0<br>TEF Cheque=0<br>Endereço IP=127.0.0.1<br>Código Loja=00000000<br>Código Terminal=SW000001<br>Porta Pin Pad=6<br>Mensagem Pin Pad=; RECARREGUE AQUI| SEU CELULAR;</p>
+                <span>Parametros Adicionais SiTef={TipoTratamento=4;DevolveStringQRCode=1}</span>
+                <p>Menu Seleção Sitef=0<br>TEF Recarga=0<br>Usa Leitor Cód. Barra=0<br>TEF Receber=0</p>
+                <h1>[NFCe]</h1>
+                <span>// Adicionada config. CFG para que o sistema também aplique a config. CFG de CST/CFOP/Alíq. a NFC-e (Café Quentinho)</span>
+                <p>Utiliza Config. CST CFOP=1<br>Contingência Não Assinada=0</p>
+                <span>// Quando Igual a 0 os serviços não são inclusos na NFCe</span>
+                <p>Incluir Serviços=0<br>Contingência Direto=0<br>Novo Modelo NFCe=1</p>
+                <span>// Opçao em que ao cancelar a NFC-e o sistema pergunte se quer cancelar a venda tambem.</span>
+                <p>Cancela Venda=1<br>Pergunta Cancela Venda=1<br>Usa NFCe=0<br>Danfe NFCe Resumido=0<br>Detalha Danfe Contingencia=0<br>Envia Email=0<br>Danfe Impressora Comum=1<br>Usa Impressora Nao Fiscal=0<br>Marca Impressora=<br>Porta Impressora=<br>NFCe Concomitante=0<br>Imprimir Informação da Venda=1<br>Usa Gaveta=0<br><span>;Imprimir Desconto do Item=0</span><br>Não incluir serviço na NFC-e=1<br>Imprimir Desconto do Item=1</p>
+                <h1>[FATURA]</h1>
+                <span>// Adicionada opção na janela estoque para visualizar histórico de compras do produto, acessível pelo botão direito na grade, o sistema traz default as compras dos últimos 90 dias (Atacarejo Preço Baixo)</span>
+                <p>Dias Histórico=90</p>
+                <span>// Filtrar ajustes na aba visualizar da janela de faturamento.</span>
+                <p>Filtra Ajuste=1</p>
+                <span>// Habilita o módulo de fracionamento de carne</span>
+                <p>Fracionamento de Carne=1</p>
+                <span>// Atualizar o preço de compra dos produtos de acordo com o rateio da desagregação.</span>
+                <p>Atualiza Preço Fração=0<br>Incremental=0<br>Selecionar Linha=0<br>Filtro=0<br>Atualiza Preços=1<br>Inc. Devoluções=0<br>Maximizado=1<br>Width=776<br>Height=561</p>
+                <h1>[ETIQUETA]</h1>
+                <p>Selecionar Vários=1<br>Incluir Semelhantes=1<br>Tipo Cod. Barras=1<br>Tipo Pesquisa=5<br>Cod Convênio=-1<br>PRECO GRUPO BARRA=1<br>Incluir CNPJ=0<br>Apenas com Alteração de Preço=0<br>Maximizado=1<br>Imp. Etiqueta 1 Coluna=Daruma DR700 Spooler<br>Imp. Etiqueta 2 Colunas=Doro PDF Writer<br>Imp. Etiqueta 3 Colunas=<br>Imp. Etiqueta 4 Colunas=<br>Imp. Etiqueta 5 Colunas=<br>Imp. Etiqueta Personalizada 1=Fax<br>Imp. Etiqueta Personalizada 2=<br>Imp. Etiqueta Personalizada 3=<br>Order Item=A_NOMEPRODUT<br>Order Produto=A_NPRODUTO<br>Modelo Etiqueta=7<br>Arredondar=0<br>Forma Pagamento=-1</p>
+                <h1>[VENDA NF]</h1>
+                <span>// Foi criado rotina para exibir mensagem de aviso quando quantidade for muito alta na tela de Lançamento de Mov. Avulso para registro NF/NFC-e. Por padrão a mensagem é exibida em quantidade acima de 500, mais possível alterar pelo CFG abaixo</span>
+                <p>Quantidade Aviso=500</p>
+                <span>// Foi adicionado na tela de Lançamento de Mov. Avulso para registro NFC-e para ao emitir NFC-e perguntar se desejar emitir uma NF-e caso o cfg esteja ativado. Por padrão a opção é desativada.</span>
+                <p>Emite NF na NFC-e Avulsa=0<br>Usar Vale Troco=0<br>PRECO=2<br>TIPO NF=0<br>CFOP=5.101<br>Preço NFC-e=1</p>
+                <h1>[BALANÇO]</h1>
+                <span>// Adicionada configura CFG para que o relatório de balanço de estoque seja impresso na ordem apresentada na grade de produtos (A Preferida)</span>
+                <p><span>;Ordenação Grade=1</span></p>
+                <span>// Foi criado relatório de produto importados no arquivo de balanço, porém é um relatório basico que não é ativo por padrão,<br>// sendo necessário o cfg. tendo em vista que já existe um relatório mais detalhado quando se conclui a importação. O relatório é<br>// impresso na tela de importa arquivo de balanço, aparece a opção para imprimir importados após ativar o cfg abaixo</span>
+                <p>Rel. Prod. Importados=1<br>Enter Cod=0<br>Tipo Cod=2<br>Incremental=0<br>Busca Detalhada=0<br>Maximiza=0<br><br>ORGANIZA=3<br>ICM COMPRA=1<br>IPI=1<br>FRETE=1<br>ICMS SAIDA=1<br>CUSTO FIXO=1<br>CUSTO VARIAVEL=1<br>COMISSAO VAREJO=1<br>COMISSAO ATACADO=1<br>IMPOSTO FEDERAL=1</p>
+                <h1>[APP]</h1>
+                <p>DATA=23/09/2016<br>NOME=INTERDATA 2.5<br>title=INTERDATA</p>
+                <h1>[NFe Entrada]</h1>
+                <span>// Foi criado checkbox acima do campo Inscrição Estadual na tela de emissão de NF-e para que possa definir cliente pessoa física sem inscrição estadual se é contribuinte isento de inscrição ou se não é contribuinte. É possivel definir qual opção padrão a utilizar com o CFG abaixo. Por padrão a configuração é desabilitada, sendo possível o cliente alterar de forma manual durante a emissão da NF-e (Metal Vidros - Rolim de Moura)</span>
+                <p>Ind. IE Contrib. CPF=0</p>
+                <span>// Observações NFe= Funrural no valor de @VALORFUNRURAL referente a alíquota de @ALIQUOTAFUNRURAL</span>
+                <p>Calcula Funrural=0<br>Alíquota Funrural Física=5,79<br>Alíquota Funrural Jurídica=3,5<br><br>NFe de Imposto=1<br>VersaoAplic=2.5.0.612<br>Frete=3<br>Pagamento=3<br>Modelo=1<br>Serie=0<br>TipoDoc=0<br>FormatoImpress=0<br>TipoEmissao=0<br>Ambiente=1<br>Finalidade=0<br>ProcEmissao=0<br>Maximizado=0<br>Height=592<br>Width=781<br>Atualiza CFOP Total=1<br>Cód. Info. Adc.=2</p>
+                <h1>[AJUSTE DE PREÇOS]</h1>
+                <p>CODBARRA=1<br>Código=4</p>
+                <h1>[PRODUCAO MADEIRA]</h1>
+                <span>{Habilita Modulo de Produção de Laminados }</span>
+                <p>ATIVO=SIM</p>
+                <span>{Habilita Modulo Produção}</span>
+                <p>PRODUCAO=SIM</p>
+                <span>{Habilita Modulo de Movimentação de Produção }</span>
+                <p>MOV PRODUCAO=NÃO</p>
+                <span>{Habilita Modulo Romaneio de Produção}</span>
+                <p>ROMANEIO=SIM</p>
+                <span>{Habilita Impressão de Romaneio de Produção }</span>
+                <p>IMPRIMIR ROMANEIO=1</p>
+                <h1>[TRANSFERENCIA]</h1>
+                <p>PRECO=0<br>CFOP=5.102<br>Agrupar Itens=0<br>Usar Cfop Produto=1<br>Height=587<br>Width=758<br>Maximizado=0</p>
+                <h1>[ROMANEIONF]</h1>
+                <p>CFOP=5102<br>CFOPRET=2102<br>ORDEM GRID=0<br>Maximizado=1</p>
+                <h1>[DEVOLUCAO]</h1>
+                <span>// Alterada janela de devolução de venda para que permitida selecionar mais de um item para lançar para devolução, assim como opção para selecionar todos, ativo por CFG</span>
+                <p>Adicionar Varios Itens=1</p>
+                <span>//1 = Funcionamento Normal<br>//2 = Envia Devoluções para Fechamento no Caixa<br>//3 = Fecha Devoluções Pendentes</span>
+                <p>Tipo Fechamento=1</p>
+                <span>// Relizar devolução de venda mesmo com conta recebida</span>
+                <p>Validar Documento Pago=0<br>CFOP= .<br>MOTIVO=-1<br>CFOP AVULSA= .<br>MOTIVO AVULSA=-1<br>FILTRO=2<br>TIPO=2<br>Maximizado=0</p>
+                <h1>[Permissões]</h1>
+                <p>Atualizar=0</p>
+                <h1>[SERVICO]</h1>
+                <span>// Disponibilizado campo Nome do Cliente no relatório do botão "Lista Agrup. Func." da tela de consulta serviço. Default = 0</span>
+                <p>Cliente Lista Agrupada=1</p>
+                <span>// Permite trocar o Titulo da peça no relatório de orçamento</span>
+                <p>TITULO PEÇAS=TESTE PECAS</p>
+                <span>// Permite trocar o Titulo do serviço no relatório de orçamento</span>
+                <p>TITULO SERVIÇOS=TESTE SERVICO</p>
+                <span>// Habilita a opção de editar o equipamento de acordo com o que o cliente deseja</span>
+                <p>Titulo Equipamento=Veículo Boladão</p>
+                <span>// Adicionada configuração CFG para agrupar produtos no relatório de orçamento da janela orçamento de serviço (Kaka Posto de Molas)</span>
+                <p>Agrupa Produto Orçamento=1</p>
+                <span>// Order Rel. Agrup. Func.=CAMPOS PARA ORDENÇÃO SEPARADOS POR VIRGULA Os campos disponíveis para ordenação são: P.ID_OS, P.ID_FUNC, F.A_NOMECLI, P.ID_PRODUTO, P.A_NPRODUTO, P.B_MAOOBRA, P.A_CODROD, P.C_PRECOVAR, PR.C_PRECOVAR, P.N_QUATIDAD, S.C_TOTAL, S.C_DESCONTO, S.C_MAOOBRA, S.C_VALORPECA, S.C_VALORMAO, S.A_EQUIPAM, S.A_MARCA, S.A_SERIE</span>
+                <p>Order Rel. Agrup. Func.=P.ID_FUNC, F.A_NOMECLI, P.ID_OS, P.B_MAOOBRA</p>
+                <span>// Adicionado CFG para obrigar Inmetro de Entrada (Campo OS Industria) na tela de Cadastro de Ordem de Serviço. Padrão 0 (SOMAR)</span>
+                <p>INMETRO ENTRADA=0</p>
+                <span>// Adicionada configuração por CFG para abrir OS do tipo Garantia, não gera financeiro, apenas baixa estoque e gera comissão caso lançado no item (Refrio).</span>
+                <p>Garantia=1</p>
+                <span>// Exibe Observações do cadastro do cliente ao selecionar para gerar OS</span>
+                <p>Exibe Obs Cliente=1</p>
+                <span>// Mostra todos os funcionários cadastrados.. Antes mostrava somente os técnicos =0 Aparecem todos os funcionários =1 Aparece somente técnicos</span>
+                <p>FILTRA FUNC OS=1<br>MOSTRAR ACRÉSCIMO ORÇAMENTO=0</p>
+                <span>// Ao enviar para o caixa gera uma venda para o serviço e outra para as peças</span>
+                <p>SEPARACAO DE SERVICO=0</p>
+                <span>// Ao finalizar a OS o sistema solicita a informação de forma de pagamento individual para peças e serviços</span>
+                <p>FORMAS DE PAG SEPARADAS=0<br>TP FILTRO=5<br>FILTRAR=2<br>ORDEM=1<br>INCREMENTAL=0<br>COD. UTILIZADO=0<br>INC. MÃO OBRA=0</p>
+                <span>// Habilita a tela de forma de pagamento na OS</span>
+                <p>FORMA DE PAGAMENTO=1</p>
+                <span>// =1 Torna obrigatório o preenchimento do campo SERIE/PLACA ao abrir a OS</span>
+                <p>SERIE/PLACA=0<br>Maximizado=1<br>Tipo Filtro=0<br>Tipo Situação=0<br>Tipo Data=0<br>Tipo Movimento=0<br>Height=560<br>Width=800</p>
+                <h1>[Relatório Grupo Desp]</h1>
+                <span>// Tipo de Ordenação.<br>// 1 = Grupo, Subgrupo, Movimento e Data<br>// 2 = Grupo, Subgrupo, Data</span>
+                <p>Criar Grupo Principal=1<br>Filtra Mov. Sem Grupo Caixa=1<br>Relatório Fecha Caixa=0<br>Tipo Ordenação=2<br>A Receber=0<br>A Pagar=0<br>Comissões=0<br>Banco=0<br>Detalhar Comissão=1<br>Caixa=0<br>Pagas=1<br>Recebidas=0<br>Historico Pagar=1<br>Historico Banco=1<br>Grupo Vale Comissão=1<br>Transferência=0</p>
+                <h1>[TOTAIS]</h1>
+                <p>INC DIFERENCA=1<br>Maximizado=1<br>Tipo=0<br>Selecionar por=1<br>Ordenar por=1<br>Data Zerada=0</p>
+                <h1>[RECIBO]</h1>
+                <p>TIPO REL=0</p>
+                <h1>[Cor]</h1>
+                <p>Usar Cor=0<br>Entrada=clWindow<br>Saida=$008080FF<br>Grade=clWindow<br>Letra=clBlack<br>Seleção=clWindow</p>
+                <h1>[GERA CONTA REC]</h1>
+                <p>LIMPA CAMPOS=0<br>INCREMENTAL=1<br>Maximized=0<br>Lançamento Unico=1<br>Divide Parcela=0</p>
+                <h1>[Gerenciar NFCe]</h1>
+                <p>Usar Cores=1<br>Mostrar Itens=1</p>
+                <h1>[NFCeCliente]</h1>
+                <p>Porta=4444<br>Intervalo=1<br>IP Servidor=Geovane<br>Limite Reg=100000<br>Dias=60</p>
+                <h1>[TERMCONSULTA]</h1>
+                <p>LOGO=C:\INTERDATA\Wallpaper 1366x768.bmp<br>PiscaPreco=1<br>Exibe Teclado=0<br>Descrição Grupo Barra=1<br>Milisegundos Preço=1500<br>Milisegundos Aviso=1500</p>
+                <h1>[Item Convênio]</h1>
+                <p>Grava Ação Convênio=1<br>Grava Ação Convênio Todos=1<br>Selecionar Varios=1<br>Filtra Item Convênio=0<br>Incremental=0<br>Filtro=0<br>Maximizado=0</p>
+                <h1>[CTe]</h1>
+                <p>Cfop=5.353<br>Tomador=0<br>Finalidade Emissão=0<br>Tipo de Emissão=0<br>Modal=1<br>Formato Impressão=0<br>Responsavel Seguro=1<br>Tipo de Serviço=0<br>Ambiente=1<br>Forma de Pagamento=0<br>Usar Cores=1<br>Grava Info Adc=1<br>InfoAdc=OI<br>InfoCteGlobalizado=SDFSDFSDFSDFSDFSDFSDFSDFSDFSDFSDF<br>Copia Participante=1<br>Copia Doc. Ref.=1<br>Copia Produto=1<br>Copia Unidade=1<br>Copia Valores=1<br>Copia Info. Rodo.=1<br>Copia Comp. Frete=1<br>Copia Tributação=1<br>Copia Info. Adc.=1<br>Diretório Exportação=E:\Livre\Marcos\75\Nova pasta<br>Último Diretório PDF=E:\XE10\</p>
+                <h1>[SNGPC]</h1>
+                <p>PATH XML=C:\ANVISA_SNGPC<br>CPF TRANSMISSOR=000.266.872-67</p>
+                <h1>[MOV VENDA]</h1>
+                <span>// Foi corrigido procedimento armazenado do relatório de entrada/saida do movimento de vendas, que retornava erro BLOB quando tentava executar o procedimento. Obs: Erro ocorria em clientes com firebird 2.0, medida pra solucionar rapido é a instalação do firebird 2.1 ou a adição do cfg abaixo =0</span>
+                <p>Novo Saída/Entrada=1</p>
+                <span>// Adicionada config. CFG para ordernar relatório margem percentual do mov. de vendas por marca, linha e sublinha</span>
+                <p>Margem Percentual por Marca=1</p>
+                <span>// Adiciona o campo hora no movimento de venda.</span>
+                <p>Filtro por Hora=0</p>
+                <span>// Default =0 Foi alterado rotina para poder filtrar o vendedor do item e não da venda, sendo possível utilizar o CFG para reativar o filtro por vendedor da venda caso necessário.</span>
+                <p>Filtra Vendedor Venda=0</p>
+                <span>// Filtra Movimentos da Tabela de especie de pagamento</span>
+                <p>Novo Especie Pag=1<br>Ordem Grupo Forma=CL.A_NOMECLI,F.A_FORMAPAG<br>Cupom Info Fiscal=0</p>
+                <span>// CFG de TESTE</span>
+                <p>Filtro Cupom=0<br>Aviso Filtro=0<br>Filtro Cod. Barra Produtos=0</p>
+                <h1>[BACKUPRESTORE]</h1>
+                <p>ATUALIZARBANCO=0</p>
+                <h1>[CONFIG GRAFICO]</h1>
+                <p>Zoom=86<br>Girar=340<br>Horizontal=0<br>Vertical=0<br>Elevacao=351<br>3D=0<br>Perc3D=8<br>Legenda=0<br>PosLegenda=1<br>Ortogonal=0<br>TipoGrafico=1<br>TipoMarca=2<br>TipoLegenda=3</p>
+                <h1>[AGENDA]</h1>
+                <p>Habilita Agenda=1<br>Mostra Evento Anterior=0<br>Habilita Repetição de Evento=1<br>Tempo Repetição de Evento=0,0208333333333333</p>
+                <h1>[BOLETO]</h1>
+                <span>// Opçao de antecipar um boleto e o sistema não disponibilize a comissão, disponibilizando somente no recebimento da conta.</span>
+                <p>Baixa Comissão Antecipação=0</p>
+                <span>// Foi criado CFG para que considere a data de ocorrência na liberação da comissão e na baixa do contas a receber, permanecendo a data de crédito da remessa na conta bancária.</span>
+                <p>Baixa Data Ocorrência=1<br>Verifica Dados=1<br>Mensagem Email=Boleto enviado automaticamente.</p>
+                <h1>[BANCO]</h1>
+                <span>// Adicionada config. CFG para que a janela de mov. bancário abra com a data inicial e final igual a data atual (Auto Posto Central)</span>
+                <p>Usar Data Atual=0</p>
+                <span>// Adicionada configuração por CFG para permitir tirar o relatório do botão "Rel. Data" da janela Mov. Bancário, apresentando também o histórico de movimentação. (Benevides)</span>
+                <p>Apresentar Histórico=1<br>USA CORES=1<br>Maximizado=0</p>
+                <h1>[PRODUCAO]</h1>
+                <p>Lançar Perda=1<br>Mostra Itens=1<br>Mostra Grupo=0<br>Tipo Filtro=1<br>Filtra Inicias=0<br>Height=532<br>Width=723<br>Maximizado=1</p>
+                <h1>[MDFe]</h1>
+                <p>Preenche Locais=1</p>
+                <span>// Adicionada opção de preenchimento do campo Valor da Carga e Peso Total na emissão de MDF-e, baseada nos dados das NF-es.</span>
+                <p>Preenche Peso e Valor=1</p>
+                <span>// Preenche automatico o campo RNTRC ao selecionar o veiculo.</span>
+                <p>Lotar RNTRC=1</p>
+                <span>// Permite inserir mais de 1 local para descarregamento.</span>
+                <p>Incluir Varios Locais de Descarregamento=1<br>Usar Cores=1<br>Tipo Emissão=0<br>Ambiente=1<br>Tipo Emitente=1<br>Modalidade=0<br>Estado Emissão=14</p>
+                <h1>[PAGAR]</h1>
+                <span>//Foi implementado ordenação padrão no relatório de Contas a Pagar Rel. Grupo cheque e também configurado para gerar os grupos e subgrupos de despesas n novo<br>//relatório. É possível realizar outras configurações no relatório caso desative o cfg abaixo que é ativo por padrão</span>
+                <p>Ordena Rel. Grupo Cheque=1</p>
+                <span>// Adicionada configuração CFG para habilitar marcação de registros no conta a pagar, menu botão direito na grade (A Preferida).</span>
+                <p>Usa Marcação Cor=1<br>Multi Seleção=1<br>Marcar com Duplo Clique=1<br>Doc. Crédito=1<br>Obrigar Observação=1</p>
+                <span>// pega o número do ultimo cheque inserido e não o maior número</span>
+                <p>Último Cheque Inserido=0<br>Calcula Juros=0<br>Gerar no Vencimento=0<br>Filtra Inicias=0</p>
+                <span>// Preenche automaticamente o número do cheque a ser lançado</span>
+                <p>Preenche Número Cheque=1<br>Imprimir Cheque=1<br>Cheque Por Fornecedor=0<br>Responsavel Padrão=14<br>Incremental=0<br>Maximizado=1<br>Tipo Lançamento=0<br>Order Field=C_VALORPAREC</p>
+                <h1>[VD MEDIÇÃO]</h1>
+                <p>Usar Cores=1</p>
+                <h1>[Sugestão Preço]</h1>
+                <p>Pular Atacado=0<br>Proxima Linha=1<br>Cor Alteracao=1<br>Maximizado=0</p>
+                <h1>[VALE]</h1>
+                <p>Maximizado=0</p>
+                <h1>[COLETA LEITE]</h1>
+                <p>Maximizado=0</p>
+                <h1>[FORMA PAG]</h1>
+                <p>Ocultar Inativas=1</p>
+                <h1>[VD ORÇAMENTO]</h1>
+                <p>ConsultaRel0=Lista 1<br>ConsultaRel1=Geovane Mandalol<br>ConsultaRel2=Lista 33333<br>ConsultaRel3=Lista 4<br>ConsultaRel4=Lista 5<br>ConsultaRel5=Lista 6<br>Usa Cores Consulta=0<br>Mostra OS/Medição=1<br>Ordem Consulta=A_NOMECLI DESC<br>Filtro Medição=2</p>
+                <h1>[ENVIA E-MAIL]</h1>
+                <p>Cadasta E-Mail=0</p>
+                <h1>[GRUPO BARRA]</h1>
+                <span>// habilita para ser obrigatório a descrição do produto em um cadastro de semelhantes</span>
+                <p>Exige Descrição=1</p>
+                <span>// Habilita para aparecer a descrição do semelhante e não do produto principal.</span>
+                <p>USA NOME GRUPO=1</p>
+                <span>// Adicionada configuração por CFG para que o sistema atualize a quantidade de embalagem ao cadastrar produto semelhante a partir da importação de NF-e.</span>
+                <p>Atualiza Qtde Embalagem Produto=1<br>Usar Qtde e Preço=1<br>Valor Aviso=200<br>Quantidade Aviso=50</p>
+                <h1>[Config Carga]</h1>
+                <p>Cfop=5102</p>
+                <h1>[KIT]</h1>
+                <p>Tipo Loc Prod Kit=1</p>
+                <h1>[LOC COD REMOTO]</h1>
+                <p>Usa Cód. Serviço=1</p>
+                <h1>[COOPERATIVA LEITE]</h1>
+                <p>Próximo Reg Desc Tanque=0<br>Maximiza Rateio=1<br>Tipo Filtro=2</p>
+                <h1>[NFCeServer]</h1>
+                <p>Porta=4444<br>Intervalo=2<br>Limite Reg=1000<br>Dias=90<br>Autorização NFCe=0</p>
+                <h1>[CONTROLE LEITE]</h1>
+                <p>Usar Cores=1</p>
+                <h1>[FECHAMENTO LEITE]</h1>
+                <p>Maximizado=1<br>Field Order=A_NOMECLI ASC</p>
+                <h1>[Papel]</h1>
+                <p>Foto=C:\INTERDATA\Wallpaper Full HD.bmp</p>
+                <h1>[PROMOÇÃO]</h1>
+                <p>Usa Combo Promo=1<br>Proxima Linha Grupo=0<br>Proxima Linha Item=1<br>Selecionar Varios Grupo=0<br>Selecionar Varios Item=0<br>Usar Cores Grupo=1<br>Usar Cores Item=1</p>
+                <h1>[REMESSA]</h1>
+                <p>Seleciona Pasta=1<br>Maximizado=1<br>Height=520<br>Width=780</p>
+                <h1>[Auto Atualizador]</h1>
+                <p>StatusAtual=3<br>hide=1<br>Servidor=127.0.0.1<br>Porta=4445</p>
+                <h1>[VDORDEMSERVICO]</h1>
+                <p>Ordem Filtro=O.I_CONTADOR</p>
+                <h1>[EDITOR]</h1>
+                <p>MAXIMIZADO=0<br>PAINEL=337</p>
+                <h1>[Projeção Rec]</h1>
+                <p>Cor Padrão=$008000FF<br>Cor Aleatória=1<br>Considera Juros=0</p>
+                <h1>[LICITACAO]</h1>
+                <span>// Opção na tela de licitações para emitir uma NF-e com itens agrupados das vendas envolvidas.</span>
+                <p>Gera NF-e Agrupada=1<br>Usar Cores=1<br>Tipo Filtro=1<br>Tipo Data=0<br>Tipo Situacao=1</p>
+                <h1>[EXPORTA ESTOQUE]</h1>
+                <p>Não Incluir Prod Uso e Consumo=0</p>
+                <h1>[Exporta Pagar]</h1>
+                <p>Cod Empresa=1<br>Cod Historico=230<br>Tipo registro=X<br>Msg Cheque=Pagou com Cheque Borrachudo<br>Msg Cartao=Passou o Cartão<br>Msg Banco=Pago com deposito<br>Msg Dinheiro=Pago com Grana<br>Usar Cores=1</p>
+                <h1>[NFCeTransmissor]</h1>
+                <p>Intervalo=15<br>Limite Reg=10000<br>Dias=10</p>
+                <h1>[CONSULTA DOC. CRED]</h1>
+                <p>Tipo=0</p>
+                <h1>[RECEBER]</h1>
+                <span>// Consegui receber conta documento gerado.</span>
+                <p>Ignora Valição Tipo Doc. Crédito=1</p>
+                <span>// Adicionada CFG para habilitar campo valor do juros/desconto no relatório recibo de contas a receber, necessário excluir relatório(Supermercado RA)</span>
+                <p>Incluir Juros no Recibo=1</p>
+                <span>// Adicionado CFG no recebimento de contas para que o sistema aceite o recebimento de contas com doc. de crédito em dinheiro</span>
+                <p>Aceita Doc. Crédito Dinheiro=1</p>
+                <span>// Ao receber uma conta o sistema disponibilize a comissão com a data configurada no recebimento, que pode ser retroativa (Inovam)</span>
+                <p>Data Comissão Retroativa=0<br>imprimir recibo=0<br>Data Agendada Cobrança=1</p>
+                <span>// Foi adicionada opção de lançar comissão ao cobrador ao receber uma conta.</span>
+                <p>Lançar Comissão Cobrador=1</p>
+                <h1>[DOC CREDITO]</h1>
+                <p>Informa Cad Cliente=0</p>
+                <h1>[PONTOESTOQUE]</h1>
+                <p>Com Estoque=1<br>Tipo Filtro=2</p>
+                <h1>[LOC PRODUTO]</h1>
+                <span>// Permite localizar por partes do nome idenpendente da ordem, desde que sejam separados por espaços.</span>
+                <p>Busca Detalhada=1<br>Exibe Prod. Semelhante=0<br>Exibe Foto=1<br>Order Field Similar=C_PRECOVAR DESC<br>Order Field Produto=A_NPRODUTO</p>
+                <h1>[EXPORTACAO GERAL]</h1>
+                <p>Tipo Filtro=1<br>Tipo Arquivo=0<br>Caminho Arquivo=C:\Arquivos de programas\SC501TXT\pricetab.txt</p>
+                <h1>[COMODATO]</h1>
+                <p>PRECO=1<br>CFOP=5.102<br>Agrupar Itens=1<br>Usar Cfop Produto=0<br>Tipo Filtro=0<br>Usar Cores=1</p>
+                <h1>[BANCO-001]</h1>
+                <p>TIPO TAXA BOLETO=2<br>TIPO MULTA BOLETO=2<br>DECIMAIS MULTA BOLETO=2</p>
+                <h1>[BANCO-104]</h1>
+                <p>TIPO TAXA BOLETO=1<br>TIPO MULTA BOLETO=2<br>DECIMAIS MULTA BOLETO=1</p>
+                <h1>[GRUPOTRIBUTACAO]</h1>
+                <p>Limpar Campos=0</p>
+                <h1>[PAGAR CONTA]</h1>
+                <p>Filtra Inicias=1</p>
+                <h1>[CONTROLE FRETE]</h1>
+                <p>Maximizado=0<br>Tipo Filtro=2<br>Width=795<br>Height=550</p>
+                <h1>[CONSULTA VIAGEM]</h1>
+                <p>Maximizado=0<br>Tipo Filtro=0<br>Tipo Data=0<br>Width=790<br>Height=595</p>
+                <h1>[FLUXO CHEQUE]</h1>
+                <span>// Adicionada opção ao depositar um cheque para perguntar se deseja compensar após o depósito, não funciona com depósitos em lote. Default 0</span>
+                <p>Compensar Após Depósito=0<br>Confirma Juros=1</p>
+                <h1>[BANCO-756]</h1>
+                <p>TIPO TAXA BOLETO=2<br>TIPO MULTA BOLETO=1<br>DECIMAIS MULTA BOLETO=2</p>
+                <h1>[CUSTODIA]</h1>
+                <span>// Adicionado CFG para configurar tipo de calculo de juros do cheque na janela custódia (Central Laminações)<br>//Tipo 1 = É o modo como já funcionava<br>//Tipo 2 = O sistema pega a data do vencimento do cheque e diminui da data da custodia para descobrir a<br>// quantidade de dias até o vencimento, até o último dia útil do primeiro mês o sistema utiliza<br>// o calculo de juros simples e após isso passa a calcular utilizando o juros composto.</span>
+                <p>Tipo Calculo Juros=2</p>
+                <span>// Taxa Mensal = 1 -> O sistema pega a taxa informada no campo taxa e divide por 30.</span>
+                <p>Taxa Mensal=10<br>Tipo Filtro Data=0<br>Tarifa Individual=0</p>
+                <h1>[CONSULTAVENDA]</h1>
+                <p>Filtra Usuario Inativo=1<br>Maximizado=1<br>Tamanho Painel Venda=223<br>Tipo Filtro Venda=2<br>Tipo Filtro Item=2</p>
+                <h1>[Reabre Venda]</h1>
+                <p>Usa Cor=1<br>Apenas sem NFC-e Emitida=0<br>Tipo Filtro=0</p>
+                <h1>[RELATÓRIOS GERENCIAIS]</h1>
+                <p>Maximizado=1<br>Produtos=1<br>Clientes=1<br>Curva ABC=1<br>Consultoria Smart=1</p>
+                <h1>[CEST]</h1>
+                <p>Incremental=0<br>Segundos Incremental=100<br>Tipo Filtro=1</p>
+                <h1>[CARTAO]</h1>
+                <p>Maximizado=1</p>
+                <h1>[CHEQUE]</h1>
+                <span>// Adicionada config. CFG para que a janela de mov. de cheque abra sem a data inicial e final preenchidas (Auto Posto Central)</span>
+                <p>Data Vazia=1</p>
+                <span>// Adicionada config. CFG para que a janela de mov. de cheque abra com os dados filtrados (Auto Posto Central)</span>
+                <p>Filtro Automático=1<br>Maximizado=1</p>
+                <h1>[NFE DESTINATARIO]</h1>
+                <p>Maximizado=1<br>Download Automatico=1<br>Manifesto Padrão=3</p>
+                <h1>[COMISSAO]</h1>
+                <span>// Permitir parcelar vale de comissão (System)</span>
+                <p>Usa Parcelamento de Vale=1</p>
+                <span>// Filtrar comissões por data de pagamento quando marcada a opção "Pagas"</span>
+                <p>Filtro por Data de Pagamento=1<br>Ordem Rel. Analítico=A_NOMECLI, C.D_DATACOMI</p>
+                <span>// Alternar a data de filtro do relatório Rel. Pag. Func. de comissões entre Emissão e Vencimento. 1 = Data de Vencimento 2 = Data de Emissão</span>
+                <p>Data Filtro Duplicata=1<br>Alterar Comissão=1<br>Maximizado=0</p>
+                <h1>[SINTEGRA]</h1>
+                <p>Finalidade Arquivo=-1<br>Natureza Operacao=-1<br>Caminho Arquivo=C:\Sintegra.txt</p>
+                <h1>[IMP LISTA PRECO]</h1>
+                <p>Maximizado=0<br>Dir Lista=</p>
+                <h1>[LIVRO CAIXA]</h1>
+                <p>Usa Cores=1<br>Mostra Linha Grade=0</p>
+                <h1>[DEVOLUCAO ENTRADA]</h1>
+                <span>// Foi criada rotina na devolução de compra na aba visualizar devoluções quando ativado a configuração de adicionar varios itens, é possivel selecionar várias devoluções e emitir uma unica nf-e</span>
+                <p>Adicionar Varios Itens=1</p>
+                <span>// Adicionada rotiana na janela de devolução de compra para permitir fazer devolução completa de mais de um pedido, ativo por CFG (Fribella).</span>
+                <p>Dev. Pedido Completo=1<br>Maximizado=1<br>Height=550<br>Width=800</p>
+                <h1>[NCM]</h1>
+                <p>Tipo Filtro=0</p>
+                <h1>[REL VACINA]</h1>
+                <p>Cód. Produto=100<br>Cód. Responsável=2<br>Proprietario=FELIPE<br>Estoque Inicial=1</p>
+                <h1>[PREVISAO]</h1>
+                <p>Próximo Dia=1</p>
+                <h1>[VIDALINK]</h1>
+                <p>Dir Envio=C:\PDV01\ENVIO\<br>Dir Resposta=C:\PDV01\RESPOSTA\</p>
+                <h1>[Rel. Venda Aberta]</h1>
+                <p>Tipo Movimento=0<br>Tipo Ordenação=4<br>Ordenação Decrescente=0</p>
+                <h1>[NFCe Temp]</h1>
+                <p>Serie=3<br>Numero=2086</p>
+                <h1>[BANCO-748]</h1>
+                <p>TIPO TAXA BOLETO=1<br>TIPO MULTA BOLETO=1<br>DECIMAIS MULTA BOLETO=2</p>
+                <h1>[RENEGOCIACAO]</h1>
+                <span></span>
+                <p>Relatório=1<br>Contrato=1<br>(Relojoaria Eska - Buritis)</p>
+                <span>//Foi adicionado o código das novas parcelas geradas no relatório de renegociação caso tenha gerado novas duplicatas que é gerado caso o cfg esteja ativado (Contas a Receber -> Renegociação).<br>//Foi adicionado o código das novas parcelas geradas na reimpressão do relatório de renegociação caso tenha gerado novas duplicatas que é gerado caso o cfg esteja ativado (Contas a Receber -> Clicar Botão Direito na Nova Parcela Gerada pela Renegociação -> Ver Detalhes da Renegociação). + um cfg na tag [GERAL] (Relojoaria Eska - Buritis)</span>
+                <p>Relatório=1<br>Contrato=1</p>
+                <span>// Relatório e contrato Benevides</span>
+                <p>Relatório=1<br>Contrato=1<br>Divide Parcela=0<br>Duplicata Totalizada=0</p>
+                <h1>[Controle Pós-Venda]</h1>
+                <p>Maximizado=0<br>Ordem Filtro=A_ESTRESICLI DESC<br>Selecionar Vários=1</p>
+                <h1>[IMPORTA ABCFARMA]</h1>
+                <p>Maximizado=0<br>Atualiza Cest=0<br>Atualiza NCM=0<br>Atualiza Descrição=0<br>Atualiza Preço Zero=0<br>Atualiza Preço Custo=0<br>Atualiza Registro MS=0<br>Inativar Novos=0<br>Atualiza Custo=1</p>
+                <h1>[BANCO-237]</h1>
+                <p>TIPO TAXA BOLETO=2<br>TIPO MULTA BOLETO=1<br>DECIMAIS MULTA BOLETO=2</p>
+                <h1>[BANCO-097]</h1>
+                <span>// Gera arquivo de remessa no padrão novo</span>
+                <p>Novo Layout=1<br>Trunca Valor Juros=1<br>Juros Mês=1<br>TIPO TAXA BOLETO=2<br>TIPO MULTA BOLETO=2<br>DECIMAIS MULTA BOLETO=2</p>
+                <h1>[DOC CRÉDITO]</h1>
+                <p>Filtro=1<br>Tipo Doc=0<br>Maximizado=1<br>Width=800<br>Height=570</p>
+                <h1>[COSULTAPAGTEF]</h1>
+                <p>Maximizado=0</p>
+                <h1>[Pag Conta TEF]</h1>
+                <p>Forma de Pagamento=1<br>Dinheiro=70<br>Troco=0</p>
+                <h1>[ROMANEIO]</h1>
+                <span>// Adicionada CFG na tela de romaneio de venda para que ordene o relatório tipo 2 de romaneio por cidade antes do nome do cliente (Fribella)</span>
+                <p>Rel. Agrupado Cidade=1</p>
+                <span>// disponibilizar informações de valor unitário, valor total, descontos e nome do cliente no relatório de romaneio de venda (Jotão Mat.)<br>// Tipo Relatório 2 agrupa por cidade ou não | Tipo Relatório 3 agrupado cidade padrão| Tipo Relatório 1 não agrupa<br>// tem também 2 e 1 | o Tipo relatório 3 é o relatório 1 agrupado por cidade padrao| tipo relatório 2 é um relatório mais detalhado que envolve os descontos</span>
+                <p>Tipo Relatório=3</p>
+                <span>// Foram adicionados nas configurações de relatórios da tela de romaneio condutores de dados para inserir total por forma de pagamento e por especie de pagamento necessário ativação de cfg</span>
+                <p>Totaliza Venda=1<br>Maximizado=0<br>Tipo Movimento=0<br>Somente Desvinculado=0</p>
+                <h1>[XMLDOWNLOAD]</h1>
+                <p>Diretório XML=C:\<br>Homologação=0</p>
+                <h1>[DB Dispositivo]</h1>
+                <p>Endereço=</p>
+                <h1>[Dispositivo]</h1>
+                <p>Espécies de Pagamento=1<br>Parcelamento=1<br>Cidades=1<br>Região=1<br>Itens da Região=1<br>Preços da Região=1<br>Clientes=1<br>Linhas=1<br>Produtos=0<br>Regras=1<br>Itens da Regra=1<br>Exp. Pedidos Dispositivo=1<br>Imp. Pedidos Interdata=1</p>
+                <h1>[Boleto HSF]</h1>
+                <p>Banco=1</p>
+                <h1>[Confere Estoque]</h1>
+                <p>Tipo Filtro=1</p>
+                <h1>[Loc. Prod. Condicional]</h1>
+                <p>Maximizado=1<br>Width=790<br>Heigth=550</p>
+                <h1>[Conferência NFe]</h1>
+                <p>Tipo=0<br>Filtro=0<br>Heigth=676<br>Width=800<br>Maximizado=0</p>
+                <br>
+                <span>// Café Quentinho - Caso a NFe seja para consumidor final o sistema altera o produto de acordo com o CFG</span>
+                <h1>[1]</h1>
+                <p>CFOP=6109<br>CST=40<br>Alíquota=0</p>
+                <h1>[Pedido Bina]</h1>
+                <p>Nome Acesso Rápido 1=Agua 20lts<br>Cód. Acesso Rápido 1=37<br>Maximizado=0<br>Width=871<br>Height=580<br>Nome Acesso Rápido 2=Botija 13kg<br>Cód. Acesso Rápido 2=100<br>Nome Acesso Rápido 3=Botija 8kg<br>Cód. Acesso Rápido 3=69<br>Nome Acesso Rápido 4=Botija 5kg<br>Cód. Acesso Rápido 4=171</p>
+                <h1>[CONTRATO MTC]</h1>
+                <p>Usar Cores Agenda=1<br>Usar Cores Contrato=1<br>Tipo Mov.=2<br>Tipo Reg.=0<br>Tipo Data=0<br>Tipo Data Contrato=0<br>Tipo Contrato=2<br>Maximizado=1</p>
+                <h1>[Lança Conf. NF-e]</h1>
+                <p>Usa Seq. Item=0</p>
+                <h1>[Conf. Envio Dispositivo]</h1>
+                <p>Sel. Vários Prod=0<br>Sel. Vários Cliente=1<br>Sel. Vários Forma=0<br>Sel. Vários Cidade=1<br>Tp Filtro Prod=0</p>
+                <h1>[Preço Região]</h1>
+                <p>Selecionar Vários=1<br>Tipo Filtro=2<br>Maximizado=0</p>
+                <h1>[Conf. Regra Prod]</h1>
+                <p>Tp Filtro Prod=0<br>Sel. Vários Prod=0</p>
+                <h1>[SIAFRODIAGNOSTICO]</h1>
+                <span>// Foi criado CFG para poder permitir gerar uma unica venda de receitas com datas diferentes, porém é bloqueado por padrão. (Casa da Ração)</span>
+                <p>Default = 1<br>Bloq. Data Dif. Venda Única=0</p>
+                <span>// Utiliza a embalagem para a geração de NF Default=1</span>
+                <p>Utiliza Embalagem=1</p>
+                <span>// Alterada janela de diagnostico siafro para que o sistema incremente o número ART automáticamente, é possível desabilitar por CFG (Agropecuária Cone Sul)</span>
+                <p>Incrementa Número ART=1<br>Maximizado=0<br>Height=508<br>Width=792</p>
+                <span>// Alterada janela de diagnostico siafro para que o sistema carregue o último número ART utilizado, é possível desabilitar por CFG (Agropecuária Cone Sul)</span>
+                <p>Utiliza Último Número ART=1<br>Último Número ART=37192<br>Venda Única=1<br>Data Pergunta=25/08/2020</p>
+                <h1>[SIAFROAGROTOXICO]</h1>
+                <p>Tipo Filtro=0<br>Somente Vinculados=1</p>
+                <h1>[Consulta Rec Siafro]</h1>
+                <p>Maximizado=0<br>Height=526<br>Width=840</p>
+                <h1>[SIAFROREFPROD]</h1>
+                <p>Tipo Filtro=0</p>
+                <h1>[Avaliação Preço]</h1>
+                <p>Preço Maior que Zero=0</p>
+                <h1>[Avalização Preço]</h1>
+                <p>Tipo Filtro=6<br>Tipo Verificação=0</p>
+                <h1>[Romaneio Gado]</h1>
+                <span>// Default =1 Outro Cfg criado pra permitir alterar o funrural, se não for permitido alterar eu não irei obrigar a informar, por que já deve vir da configuração ou permanecer zerado.</span>
+                <p>Altera Funrural=1</p>
+                <span>// Default =1 Foi criado também o CFG que obriga o preenchimento do funrural, tanto ele automático como ele manual.</span>
+                <p>Funrural Obrigatório=1</p>
+                <span>// Foi implementado botão novo para criação de novos romaneios e o botão F7 para localizar romaneios abertos.<br>// Default =0 Foi criado o CFG para poder definir os dias que deseja filtrar o romaneio aberto, sendo 0 pra filtrar só o dia atual que também é a configuração padrão.</span>
+                <p>Dias Filtro Aberto=30</p>
+                <span>// Ao fechar o romaneio, agora é realizado o cálculo do Funrural para o desconto no total do romaneio. Esse desconto é utilizado também na emissão de nota fiscal e foi criado um campo no banco de dados e disponiblizado nos relatórios o valor descontado do funrural.<br>// Dafualt =0 Foram criados CFG's para utilização do funrural de forma automatica, de qualquer forma fica liberado de forma manual pra preenchimento do funrural. Como já utiliza o calculo do funrural na nota de entrada que é a nota emitida pela tela de romaneio, é possivel utilizar uma configuração que use os dados da tag da NFe de entrada caso lá já tenha as aliquotas configuradas.</span>
+                <p>Funrural NFe Entrada=0</p>
+                <span>// Default =0 Caso não queira utilizar as informação da tag da nfe de entrada, pode se configurar na própria tag do Romaneio Gado conforme abaixo.</span>
+                <p>Calcula Funrural=1<br>Alíquota Funrural Física=0,5<br>Alíquota Funrural Jurídica=1,3</p>
+                <span>// Default =1 Foi criado rotina para gerar contra nota do gado abatido que é solicitada sua geração ao fechar o romaneio. É possível no movimento de romaneio emitir a nf da contra nota e também gerar uma contra nota caso o romaneio ainda não tenha.</span>
+                <p>Gera Contra Nota=1<br>Height=550<br>Width=795<br>Maximizado=0<br>Filtra Inicias Forn=1<br>Filtra Inicias Prod=1<br>Rel. Unificado=0</p>
+                <h1>[Balança]</h1>
+                <p>Ativa=0<br>Porta=COM1<br>BaudRate=4800<br>StopBits=2<br>Parity=n<br>ByteSize=7</p>
+                <h1>[Mov. Romaneio Gado]</h1>
+                <p>Height=570<br>Width=795<br>Maximizado=1</p>
+                <h1>[Trans. Finalizadas]</h1>
+                <p>Maximizada=0</p>
+                <h1>[ALTERA REC]</h1>
+                <p>Altera Valor Total=0</p>
+                <h1>[Conf. Estoq. Entrega]</h1>
+                <p>Maximizado=0<br>Width=790<br>Height=535</p>
+                <h1>[Hist. Doc. Créd.]</h1>
+                <p>Maximizado=0<br>Width=800<br>Height=560<br>Order Field=</p>
+                <h1>[Consulta Ordem Produção]</h1>
+                <p>Height=620<br>Width=900<br>Maximizado=0<br>Order Field=A_NPRODUTO DESC</p>
+                <h1>[Produção Gráfica]</h1>
+                <p>Maximizado=0<br>Height=745<br>Width=1024</p>
+                <h1>[Consulta Pedido Gráfica]</h1>
+                <p>Height=650<br>Width=900<br>Maximizado=0<br>Mostra Item=1</p>
+                <h1>[Loc. Func. Produção]</h1>
+                <p>Filtro=0</p>
+                <h1>[Cad NCM Grupo Trib]</h1>
+                <span>// Implementada opção no cadastro de grupo de tributação para atualizar o custo fixo e % de icms de compra junto com a atualização da tributação, ativo por CFG (Eletronica Real)</span>
+                <p>Custo Fixo e Icms de Compra=1<br>Height=610<br>Width=704<br>Maximizado=0<br>Atualização Produto=1</p>
+                <h1>[ORC SERVICO]</h1>
+                <p>Height=553<br>Width=808<br>Maximizado=0</p>
+                <h1>[Cad. Cartão]</h1>
+                <p>Mostrar Inativos=1</p>
+                <h1>[Loc. Máquina]</h1>
+                <p>Filtro=0</p>
+                <h1>[Pedido Gráfica]</h1>
+                <p>Focar Quantidade na Alteração=1<br>Height=680<br>Width=930<br>Maximizado=0<br>Order Field=D_DATA DESC</p>
+                <h1>[Emite NFCe Venda]</h1>
+                <p>Maximizado=1<br>Usar Cores=1<br>Apenas sem NFCe Emitida=0<br>Apenas sem NFe Emitida=0<br>Height=580<br>Width=800</p>
+                <h1>[Romaneio Avulso]</h1>
+                <p>Height=600<br>Width=900<br>Maximizado=0</p>
+                <h1>[Formula Preço]</h1>
+                <p>Maximizado=0<br>Height=870<br>Width=870</p>
+                <h1>[CLASSE CLIENTE]</h1>
+                <p>Tipo=1</p>
+                <h1>[INSERETRIBGRUPPROD]</h1>
+                <p>Maximizado=0<br>Alterados=1</p>
+                <h1>[INSERETRIBPROD]</h1>
+                <p>PERGUNTA SISTEMA=0</p>
+                <h1>[Importa Plano Conta]</h1>
+                <p>Maximizado=0<br>Width=730<br>Height=500</p>
+                <h1>[Ref. Plano Conta Sped]</h1>
+                <p>Maximizado=0<br>Width=800<br>Height=560</p>
+                <h1>[EQUIPAMENTO OS]</h1>
+                <p>Height=490<br>Width=798<br>Maximizado=0<br>Sugestão=0</p>
+                <h1>[TROCA]</h1>
+                <p>Maximizado=0<br>Tipo Filtro=1</p>
+                <h1>[REAJUSTE]</h1>
+                <span>// Adicionado campo na janela de reajuste de preço para permitir reajustar preço aplicando diretamente o valor final do produto, ativo por CFG (Atacarejo Preço Baixo).</span>
+                <p>Rejuste por Valor=1<br>Width=800<br>Height=550<br>Selecionar Registro=1<br>Maximizado=1</p>
+                <h1>[Forma Pag. Personal]</h1>
+                <p>Largura Forma=202<br>Height=490<br>Width=934<br>Maximizado=0</p>
+                <h1>[MEUS PEDIDOS]</h1>
+                <p>Usar Cores Pedidos=1</p>
+                <h1>[Config. Envio Disp]</h1>
+                <p>Maximizado=0<br>Disp. Cliente 0=1<br>Disp. Produto 0=1<br>Disp. Forma 0=1<br>Disp. Cidade 0=1<br>Disp. Espécie 0=1<br>Disp. Cliente 1=0<br>Disp. Produto 1=1<br>Disp. Forma 1=1<br>Disp. Cidade 1=0<br>Disp. Espécie 1=1<br>Disp. Cliente 2=0<br>Disp. Produto 2=0<br>Disp. Forma 2=1<br>Disp. Cidade 2=0<br>Disp. Espécie 2=1<br>Disp. Cliente 3=0<br>Disp. Produto 3=0<br>Disp. Forma 3=1<br>Disp. Cidade 3=0<br>Disp. Espécie 3=1<br>Disp. Cliente 4=0<br>Disp. Produto 4=0<br>Disp. Forma 4=1<br>Disp. Cidade 4=0<br>Disp. Espécie 4=1<br>Disp. Cliente 5=0<br>Disp. Produto 5=0<br>Disp. Forma 5=1<br>Disp. Cidade 5=0<br>Disp. Espécie 5=1<br>Disp. Cliente 6=0<br>Disp. Produto 6=0<br>Disp. Forma 6=0<br>Disp. Cidade 6=0<br>Disp. Espécie 6=0<br>Disp. Cliente 7=0<br>Disp. Produto 7=0<br>Disp. Forma 7=0<br>Disp. Cidade 7=0<br>Disp. Espécie 7=0<br>Disp. Cliente 8=0<br>Disp. Produto 8=0<br>Disp. Forma 8=0<br>Disp. Cidade 8=0<br>Disp. Espécie 8=0<br>Disp. Cliente 9=0<br>Disp. Produto 9=0<br>Disp. Forma 9=0<br>Disp. Cidade 9=0<br>Disp. Espécie 9=0<br>Disp. Cliente 10=0<br>Disp. Produto 10=0<br>Disp. Forma 10=0<br>Disp. Cidade 10=0<br>Disp. Espécie 10=0</p>
+                <h1 style="color: rgb(19, 232, 207);">;[Acesso Remoto]</h1>
+                <p><span>;Download Link=http://www.ammyy.com/AA_v3.php</span></p>
+                <h1>[ENTREGA SIMPLES]</h1>
+                <p>Height=738<br>Width=760<br>Maximizado=0<br>OrderField=I_CONTADOR DESC</p>
+                <h1>[MIX FISCAL]</h1>
+                <p>Minutos Intervalo=1<br>Maximizado=0</p>
+                <h1>[DRE]</h1>
+                <span>// Para a configuração "Tipo Filtro Pagar" estão disponíveis as opções:<br>// 1 = Filtra as contas não pagas por data de vencimento<br>// 2 = Filtra as contas não pagas por data de emissão<br>// 3 = Filtra as contas pagas por data de pagamento<br>// 4 = Filtra as contas pagas por data de pagamento e não pagas por data de vencimento<br>// 5 = Filtra as contas pagas por data de pagamento e não pagas por data de emissão</span>
+                <p>Tipo Filtro Pagar=3</p>
+                <br>
+                <span>// Para a configuração "Tipo Filtro Comissão" estão disponíveis as opções:<br>// 1 = Filtra as comissões não pagas por data de geração<br>// 2 = Filtra as comissões não pagas por data de disponibilização<br>// 3 = Filtra as comissões pagas por data de pagamento<br>// 4 = Filtra as comissões pagas por data de pagamento e não pagas por data de geração<br>// 5 = Filtra as comissões pagas por data de pagamento e não pagas por data de disponibilização</span>
+                <p>Tipo Filtro Comissão=5<br>Tipo=2<br>Modelo=1<br>Regime=0</p>
+                <h1>[TRN CENTRE]</h1>
+                <span>ULT ARQ=001<br>Homologação=1<br>CNPJ=99999994007252</span>
+                <span>// \\servidor\TRNCENTR\Req</span>
+                <p>Diretório Envio=C:\TRNCENTR\Req<br>Diretório Retorno=C:\TRNCENTR\Resp<br>Diretório Operadora=C:\TRNCENTR\<br>Segundos Retorno=1<br>Segundos Espera=15</p>
+                <h1>[NFSe Entrada]</h1>
+                <span>// Adicionada configuração por CFG para abrir janela de lançamento de contas a pagar ao lançar uma NFS-e de entrada (Varsóvia)</span>
+                <p>Lançar Conta a Pagar=1</p>
+                <h1>[Composição Generica]</h1>
+                <p>Width=650<br>Height=450<br>Maximizado=0</p>
+                <h1>[REMESSA TRANSF]</h1>
+                <p>Diretório=E:\<br>Ordem Trasferência=A_TIPOTRANSF,A_NOMECLI DESC</p>
+                <h1>[Rel. Comissão Rec]</h1>
+                <p>Tipo Filtro=0<br>Tipo de Comissão=0<br>Tipo de Data=0</p>
+                <h1>[BANCO-3271]</h1>
+                <p>TIPO TAXA BOLETO=1<br>TIPO MULTA BOLETO=1<br>DECIMAIS MULTA BOLETO=2</p>
+                <h1>[LOC CIDADE]</h1>
+                <p>Incremental=0</p>
+                <h1>[COMBO VENDA]</h1>
+                <p>Maximizado=0</p>
+                <h1>[Abrir Venda]</h1>
+                <p>Order Field=I_CONTADOR DESC<br>Filtra por Código=1</p>
+                <h1>[CAD ROMANEIO]</h1>
+                <p>Maximizado=0<br>Tipo Romaneio=1</p>
+                <h1>[Consulta Romaneio Teca]</h1>
+                <p>Situação=0<br>Tipo=2</p>
+                <h1>[Consulta Romaneio]</h1>
+                <p>Ordem Romaneio=I_CONTADOR DESC</p>
+                <h1>[Romaneio Teca]</h1>
+                <p>Tipo Calc. Preço=0</p>
+                <h1>[Regra CFOP]</h1>
+                <p>Order Field=I_TIPOMOV DESC</p>
+                <h1>[Torra]</h1>
+                <p>Maximizado=0</p>
+                <h1>[Consulta Blend]</h1>
+                <p>Maximizado=0<br>Tipo Filtro=0</p>
+                <h1>[Produtos comprados com]</h1>
+                <p>Maximizado=0</p>
+                <h1>[CONTROLE ABASTECIMENTO]</h1>
+                <h1>Maximizado=0</h1>
+                <h1>[EMPACOTAMENTO DE CAFE]</h1>
+                <p>Maximizado=0</p>
+                <h1>[GER.CADASTRO DE MARCAS PARA COTACAO]</h1>
+                <p>Maximizado=0</p>
+                <h1>[Consulta Reclassificação]</h1>
+                <p>Maximizado=0</p>
+                <h1>[Reclassificação]</h1>
+                <p>Maximizado=0<br>CFOP=1.926</p>
+                <h1>[GER.CADASTRO FORNECEDOR]</h1>
+                <p>Maximizado=0</p>
+                <h1>[GER.CADASTRO FORMA PAGAMENTO COTACAO]</h1>
+                <p>Maximizado=0</p>
+                <h1>[GER.CADASTRO DE COTACAO]</h1>
+                <p>Maximizado=1</p>
+                <h1>[ITENS DW COTACAO]</h1>
+                <p>Maximizado=1</p>
+                <h1>[Filtar por]</h1>
+                <p>Tipo de localização=0</p>
+                <h1>[PRESCRIÇÃO ÓTICA]</h1>
+                <p>Maximizado=0</p>
+                <h1>[Consulta Venda]</h1>
+                <p>Maximizado=0</p>
+                <h1>[Kit Café]</h1>
+                <p>Filtro Situação=2<br>Alt. Gride Kit Consulta=145</p>
+                <h1>[Fechamento Vendedor]</h1>
+                <p>Maximizado=0</p>
+                <h1>[Gera Romaneio]</h1>
+                <p>Maximizado=0</p>
+                <h1>[Pedido Carregamento]</h1>
+                <p>Maximizado=0</p>
+                <h1>[Romaneio de Carga]</h1>
+                <p>Maximizado=0<br>Tipo Filtro=1</p>
+                <h1>[Lança Coleta Leite]</h1>
+                <p>Maximizado=0</p>
+                <h1>[GERECIAMENTO DE BALANCA]</h1>
+                <p>Maximizado=0</p>
+                <h1>[Conciliacao]</h1>
+                <p>Maximizado=1<br>Painel direito=723</p>
+                <h1>[Fecha Conciliacão]</h1>
+                <p>Maximizado=0</p>
+                <h1>[Orçamento]</h1>
+                <span>// Foi corrigido a rotina de cálculo de desconto x acrescimo da venda em conjunto com o desconto da forma de pagamento para funcionar de acordo com o<br>// funcionamento da venda, que é exatamento o que o cliente pediu. Caso alguem necessite utilizar da forma que funcionava anteriormente, mesmo estando<br>// causando divergencia nos valores praticados na venda é possível ativar o CFG abaixo para usar da forma anterior. Por padrão este CFG é 1.</span>
+                <p>Desconto Padrão=1</p>
+                <br>
+                <span>/ Foi criado CFG para mensagem de aviso quando atingir um valor muito alto de transferência para terceiros com padrão de 5000. (Cooaprolim)</span>
+                <h1>[REMESSA TRANSF]</h1>
+                <p>Valor Aviso=5000</p>
+                <h1>[Consulta Carreg. Cafe]</h1>
+                <p>Maximizada=0</p>
+                <h1>[Carreg. Avulso]</h1>
+                <p>Height=540<br>Width=800<br>Maximizado=0<br>PRECO=2<br>CFOP=5.405<br>Agrupar Itens=1<br>Usar Cfop Produto=1</p>
+                <h1>[Fluxo Caixa]</h1>
+                <p>Maximizado=1</p>
+                <h1>[Autorizacao pagamento cafe]</h1>
+                <p>Maximizado=1</p>
+                <h1>[Mov. Prod. Avariado]</h1>
+                <p>Maximizado=0</p>
+                <h1>[Abc Pedido]</h1>
+                <p>Maximizado=0</p>
+                <h1>[Menu Tree]</h1>
+                <p>Top=9<br>Left=7<br>Recolhido=0<br>Estado 0=1<br>Estado 1=0<br>Estado 2=0<br>Estado 3=0<br>Estado 4=1<br>Estado 5=0<br>Estado 6=0<br>Estado 7=0<br>Estado 8=0<br>Estado 9=0<br>Estado 10=1<br>Estado 11=0<br>Estado 12=0<br>Estado 13=0<br>Estado 14=0<br>Estado 15=0<br>Estado 16=0<br>Estado 17=0<br>Estado 18=0<br>Estado 19=1<br>Estado 20=0<br>Estado 21=0<br>Estado 22=0<br>Estado 23=1<br>Estado 24=0<br>Estado 25=0<br>Estado 26=0<br>Estado 27=0<br>Estado 28=0<br>Estado 29=0<br>Estado 30=0<br>Estado 31=0<br>Estado 32=0<br>Estado 33=0</p>
+                <h1>[Relatorio Gas]</h1>
+                <p>ProdP2=0<br>ProdP5=0<br>ProdP8=0<br>ProdP13=0<br>ProdP45=0<br>ProdP65=0<br>Data Inicio=<br>Registro ANP=<br>Capacidade ARM=0<br>DEPD=0<br>DEPR=0<br>PRT=0<br>PRR=0<br>PRD=0</p>
+                <h1>[Gerenciador de Empacotamento]</h1>
+                <p>Maximizado=0</p>
+                <h1>[Compra Café]</h1>
+                <p>Obrigar Nota Fiscal=0</p>
+                <h1>[NF Conta Sped]</h1>
+                <p>Ind Dest=1</p>
+                <h1>[FECHAMENTO POSTO]</h1>
+                <p>Filtra Cliente=0</p>
+                <h1>[Identificador Posto]</h1>
+                <p>Exibe Inativo=0</p>
+                <h1>[Ação Usuário]</h1>
+                <span>// Foi adicionado na tela de estoque ao clicar com o botão direito no produto será exibida a opção Consultar Ação de Usuário para realizar uma consulta rápida nas<br>// alterações daquele produto em especifico. Ao clicar o sistema buscará a data da ultima alteração e diminuirá 90 dias dessa data para filtrar as alterações do produto.<br>// Caso queira alterar o período que é diminuido na data da ultima alteração possui o cfg abaixo. Por padrão é 90.</span>
+                <p>Dias Filtro Auto=360</p>
+                <h1>[Mov. Venda NF Avulsa]</h1>
+                <p>Filtra NFC-e Avulsa=1</p>
+                <h1>[CERTIFICADO DIGITAL]</h1>
+                <p>Certificado Local=0</p>
+                <br>
+                <span>// Foi implementado cfg para captura de peso na tela de venda do INTERDATA semelhante ao romaneio de gado. No campo quantidade da tela do INTERDATA, ficara um icone de<br>// balança que pode ser acessado clicando ou pressionando F10 se estiver focado no campo quantidade que abrirá uma tela para captura de peso.</span>
+                <h1>[Balança RG]</h1>
+                <p>Ativa=1<br>Porta=COM4<br>BaudRate=4800<br>StopBits=2<br>Parity=n<br>ByteSize=7<br>MiliSeconds=10</p>
+                <h1>[Filtrar por]</h1>
+                <p>Tipo de localização=0</p>
+                <h1>[COTACAO DO REPRESENTANTE]</h1>
+                <p>Maximizado=0</p>
+                <h1>[Análise Estoque]</h1>
+                <p>Exibir Análise Inicio=0</p>
+                <h1>[BANCO-133]</h1>
+                <p>TIPO TAXA BOLETO=1<br>TIPO MULTA BOLETO=1<br>DECIMAIS MULTA BOLETO=2</p>
+                <h1>[HIPER PDV]</h1>
+                <span>//Foi realizado salvamento da ordenação do Grid somente para o CNPJ da Agroterra e com o CFG abaixo que é ativado por padrão devido o fato de ter sido removido por algum motivo tão salvamente do Grid, evitando assim causar problemas para os demais clientes e caso cause no cliente em questão é só desativar o CFG abaixo.<br>1 - Ativado + CNPJ Agroterra (Padrão)<br>0 - Desativado<br>2 - Ativado Geral</span>
+                <p>Salva Gride Localização=1<br><br>1 - Ativado + CNPJ Agroterra (Padrão)<br>0 - Desativado<br>2 - Ativado Geral</p>
+                <span>//Foi adicionado um campo para informar o número do empenho ao selecionar a licitação no Hiper PDV.</span>
+                <p>Empenho na Licitação=1</p>
+                <span>CFG Ativa terminal que emite comanda</span>
+                <p>Terminal Cliente Comanda=1</p>
+                <span>CFG Ativa terminal que emite comanda, PRECISA DE SQL (Tem Tem Supermercado - Machadinho D'Oeste)</span>
+                <p>Terminal Cliente Comanda=1</p>
+                <span>// Opção para transformar produto em diverso.</span>
+                <p>Transforma Diverso=1</p>
+                <span>// Habilita tela nova de fechamento de caixa do PDV</span>
+                <p>Novo Caixa=0</p>
+                <span>// Implementada configuração CFG, ativa por default 1 e 2, para truncar o valor de parcelas do cartão e jogar o residuio na primeira parcela ao invés da última (Mercado Familia)<br>// Tipo Residuo Parcela 1=Joga o resíduo na última parcela | 2=Joga o resíduo na primeira parcela</span>
+                <p>Trunca Valor Parcela=0<br>Tipo Residuo Parcela=1</p>
+                <br>
+                <span>// Foi implementado no Hiper PDV, opção de fazer sangria de vários documentos do caixa, ativo por CFG</span>
+                <p>Sangria Geral=1</p>
+                <span>// Adicionada rotina para imprimir uma lista dos produtos com desconto de combo após a venda no Hiper PDV, pode ser desativada por CFG</span>
+                <p>Imprime Lista Desconto Combo=1</p>
+                <span>// Adicionada configuração CFG no PDV para o sistema utilizar o preço do convênio do produto principal caso o semelhante não possua preço nem quantidade (Mercado Fortaleza)</span>
+                <p>Usar Preço Convênio Principal=1</p>
+                <span>// Adicionado CFG para não permitir realizar uma sangria no PDV com valor superior ao disponível no caixa (Mercado Vista Alegre)</span>
+                <p>Validar Saldo Sangria=1</p>
+                <span>// Adicionada opção para pagar venda com doc. de crédito na janela de fechamento do Hiper PDV, ativo por CFG (Atacarejo Preço Baixo).<br>// Funciona no Hiper PDV OFF, porém o sistema irá tentar conexão com servidor para consultar o valor restante do documento, caso não consiga o sistema não deve permitir o fechamento.</span>
+                <p>Lançar Doc. Crédito=1</p>
+                <span>// Adicionada configuração por CFG para permitir selecionar entregador na tela para anotar entrega no Hiper PDV (Distribuidora Rigonato)</span>
+                <p>Selecionar Entregador=1</p>
+                <span>// Adicionada configuração por CFG para imprimir desconto no relatório de entrega da impressora térmica no Hiper PDV (Distribuidora Rigonato)</span>
+                <p>Desconto Entrega=1</p>
+                <span>// Adicionada configuração por CFG para não imprimir o espaço para assinatura do funcionário e conferente no relatório de entrega da impressora térmica no Hiper PDV (Distribuidora Rigonato)</span>
+                <p>Imprimir Assinaturas Entrega=1</p>
+                <span>// Habilita Transferência de caixa para banco ALT+F9</span>
+                <p>Transferência de Caixa=0</p>
+                <span>// O Baratão do JP<br>// Imprime uma lista de produtos vendidos da linha especificada para conferencia de vendas do açougue</span>
+                <p>Lista de Produtos do Açougue=1<br>Qtde Vias Lista Açougue=2</p>
+                <span>// I_CONTADOR da linha</span>
+                <p>Linha Açougue=4</p>
+                <br>
+                <span>// Configuração para Habilitar/desabilitar preço de promoção (Santa Helena)</span>
+                <p>Pergunta Promoção=0<br>Recalcula Promoção=1</p>
+                <br>
+                <span>// Opção para Atacarejo CTRL+A</span>
+                <p>Carrega Venda Fechada=1</p>
+                <span>// Recalcula o preço de convênio quando a venda é reaberta ctrl+F2</span>
+                <p>Recalcula Convênio=1<br>Convênio Produto=1</p>
+                <span>// Ignora opções a promoção na venda de convênio e Classe</span>
+                <p>Ignora Promoção Classe=0<br>Ignora Promoção Convênio=0<br>Vias Duplicata=1<br>Via Extra Entrega Fardo=1</p>
+                <span>// teste PDV</span>
+                <p><span>;Max Prod=300<br>;Max Qt=4</span></p>
+                <br>
+                <span>{Rigonato 'Reabre venda'/'emite NFCe Avulsa' CTRL+F8 E CTRL+F9}</span>
+                <p>Reabre Venda Fechada=1<br>Emite NFCe Avulsa=1<br>Foco Grade Localização=1<br>Max Tentativa Transação=1000</p>
+                <span>{Habilita menu de Operações atalho ctrl+o }</span>
+                <p>Menu de Operações=1</p>
+                <span>{ **** Operações ****<br>//01-Suprimento<br>//02-Sangria<br>//03-Cancelar Item<br>//04-Cancelar Venda<br>//05-Carregar ultima Venda<br>//06-Consulta Cliente<br>//07-Pesquisa Rápida Produto<br>//08-Cancelar NFC-e<br>//09-Transforma prod. Diverso<br>//10-<br>//11-Trocar Usuário<br>//12-Configurações do Sistema<br>//13-Indicadores de Caixa<br>//14-<br>//15-<br>//16-Menu ConvCard<br>//17-Encerrar Caixa<br>//18-<br>//19-<br>//20-<br>}</span>
+                <p>Cód. Barra Cliente=1<br>Aumenta Decimais Grupo Barra=1<br>Licitação Produto=1</p>
+                <br>
+                <span>//Foi criado configuração no Hiper PDV para que quando for ativada a Alerta Retirada Caixa possa ser utilizado o cfg Alerta Retirada Dinheiro para que o valor<br>//considerado seja somente de dinheiro e não de dinheiro e cheque que é o padrão utilizado. Por padrão Alerta Retirada</span>
+                <p>Dinheiro=0<br>Alerta Retirada Caixa=1<br>Alerta Retirada Dinheiro=1</p>
+                <span>// PDV Avisa quando o caixa atingir o valor em dinheiro.</span>
+                <p>Valor Retirada=20000</p>
+                <span>// Tipo mensagem alerta<br>// 1-botão 'Sim'/'Não' Def 'Não'<br>// 2-botão 'OK'</span>
+                <p>Tipo Mensagem Alerta Retirada=1<br>Mensagem Alerta Retirada=Atenção! Solicite a Fiscal de Caixa!</p>
+                <span>// para que a janela de dados do cliente avulso seja aberta mesmo que o PDV não emita nenhum tipo de doc. fiscal.</span>
+                <p>Informar Dados do Cliente=1<br>Valor Maximo Item=1000<br>Quantidade Maxima Item=1000</p>
+                <span>// Não filtra indicarores de caixa.</span>
+                <p>Não Filtra Mov. Caixa=0<br>Imp. Vale Troco de Vale Troco=1</p>
+                <span>// Ordem para usar o * para multiplicar<br>// 1=QT*Cod<br>// 2=Cod*QT</span>
+                <p>Tipo Codigo Qtde=1<br>Tela de Espera=1<br>Conf. Impressão Danfe NFC-e=0</p>
+                <span>// Permite alterar o tempo de espera da mensagem do status do caixa - Livre, fechado ou ocupado</span>
+                <p>Tempo Tela de Espera=1<br>Teste Cupom=0</p>
+                <span>// Mostra os descontos que foram realizados no convênio</span>
+                <p>Mostra Desc Convênio=1<br>Em Teste=1</p>
+                <span>// Define o Período de geração do vencimento da requisição. tipo=2 Geração para o dia no mês atual se for possível. Tipo=1 Gera para o próximo mês;</span>
+                <p>Tipo Requisição=2<br>Gera Log Transação=0</p>
+                <span>// Habilita função que recupera última venda realizada (Ctrl+F2).</span>
+                <p>Recupera Venda=1<br>Usar Código de barras=1<br>Usar Cupom fiscal=1<br>Usar cupom comcumitente=0<br>Usar venda a prazo=1<br>Usar Gaveta=0<br>Localizar produto=1<br>Usar impressão de duplicata=0<br>Usar balança=0</p>
+                <span>// Habilita a transmissão automática das NFC-e pendente por falta de internet</span>
+                <p>Tipo Transação=wait</p>
+                <span>// Permite imprimir os itens que foram cancelados na venda</span>
+                <p>IMPRIMIR ITEM CANCELADO=0</p>
+                <span>// Permite a troca da resolução automática ao abrir o hiper pdv -(Não pode ser configurado em clientes)</span>
+                <p>Troca Resolução=0</p>
+                <br>
+                <p>Mensagem promocional=..--¨¨--....--¨¨--....--¨¨--....--¨¨--....--¨¨--..VOLTE SEMPRE!..--¨¨--....--¨¨--....--¨¨--....--¨¨--....--¨¨--..</p>
+                <h1>[DEVELOPMENT]</h1>
+                <span>// Realizar testes de NFCe no fechamento de vendas</span>
+                <p>Teste ntFuncNFCe=0</p>
+            </div>
+        </div>
+    </section>
+    <div class="rodape">
+        <h3>Todos os Direitos Reservados - HSF</h3>
+    </div>
+    <!--rodape-->
+    <script type="text/javascript" src="js/function.js"></script>
+</body>
+
+</html>
